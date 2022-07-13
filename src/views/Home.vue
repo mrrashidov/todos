@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <home-button></home-button>
-    <p>This is the home page</p>
+  <Header />
+  <div class="lg:w-[1200px] mx-auto">
+
   </div>
+
 </template>
 
-<script>
-import HomeButton from '@/components/UI/HomeButton.vue'
+<script lang="ts">
+import Header from '@/components/Header.vue'
 
 export default {
   components: {
-    HomeButton
+    Header
   }
 }
 </script>
