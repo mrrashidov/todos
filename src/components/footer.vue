@@ -4,7 +4,7 @@
       class="footerImgSection w-screen max-w-full h-1/3 flex justify-center items-center"
     >
       <div class="mr-20">
-        <img src="@/assets/footer.png" alt="img" class="w-96 mb-20" />
+        <img src="images/footer.png" alt="img" class="w-96 mb-20" />
       </div>
       <div class="w-[300px] h-auto flex flex-wrap md:w-[500px]">
         <h1 class="font-bold text-[25px] md:text-[40px]">
@@ -72,7 +72,7 @@
                   :alt="item.alt"
                   :height="item.height"
                   :viewBox="item.viewBox"
-                  :xmnls="item.xmlns"
+                  :xmnls="item.xmnls"
                 >
                   <path
                     :d="item.d"
@@ -89,7 +89,7 @@
 
       <!-- 2-part 2-stack -->
 
-       <div
+      <div
         class="w-[200px] h-1/3 mt-20 flex flex-wrap ml-10 p-4 xl:mt-0 md:w-1/2 md:p-0 md:ml-0 md:mt-2 md:justify-evenly"
       >
         <ul class="mt-0 md:mt-0">
@@ -101,7 +101,7 @@
                 : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black w-auto',
             ]"
             v-for="item in footer_1"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -115,7 +115,7 @@
                 : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black ',
             ]"
             v-for="item in footer_2"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -129,7 +129,7 @@
                 : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black ',
             ]"
             v-for="item in footer_3"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -152,13 +152,13 @@
           class="border-[1px] border-solid border-[#6b6b6b] w-[0px] h-[12px]"
         ></div>
         <p class="text-lg text-[#575757] cursor-pointer">Terms</p>
-        <img src="@/assets/copyright.png" alt="image" class="w-3 h-3 ml-3" />
+        <img src="images/copyright.png" alt="image" class="w-3 h-3 ml-3" />
         <p class="text-sm text-[#575757] cursor-pointer">Doist Inc</p>
       </div>
       <div
         class="xl:w-36 relative flex justify-evenly items-center bg-[#cdcdcd] rounded-lg"
       >
-        <img src="@/assets/internet.png" alt="image" class="w-5 h-5 ml-3" />
+        <img src="images/internet.png" alt="image" class="w-5 h-5 ml-3" />
 
         <select
           class="form-select cursor-pointer block w-full px-3 py-1.5 text-base focus:border-blue-600 font-normal text-gray-700 bg-[#cdcdcd] bg-clip-padding border-gray-300 rounded-lg transition ease-in-out outline-none m-0 focus:text-gray-700"

@@ -1,7 +1,15 @@
-<script lang="ts" setup></script>
 <template>
   <div class="">
-    <h1>Login</h1>
-    <p>This is the login page</p>
+    <Login />
   </div>
 </template>
+
+<script lang="ts">
+import Login from "@/components/Login/LoginComp.vue";
+
+export default {
+  components: {
+    Login,
+  },
+};
+</script>
