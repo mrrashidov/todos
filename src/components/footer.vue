@@ -61,13 +61,12 @@
           <p class="text-[18px] mt-5 md:text-lg">
             Join millions of people who organize work and life with Todoist.
           </p>
-          <ul
-            class="flex flex-wrap  w-44 items-center mt-5  justify-between ">
-           <li v-for="item in images" :key="item.id">
-            <a :href="item.href">
-              <img :src="item.url" :alt="item.alt" :class="item.style" >
-            </a>
-           </li>
+          <ul class="flex flex-wrap w-44 items-center mt-5 justify-between">
+            <li v-for="item in images" :key="item.id">
+              <a :href="item.href">
+                <img :src="item.url" :alt="item.alt" :class="item.style" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -162,37 +161,36 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-
 const images = ref([
   {
-    id:1,
-    url:'images/facebook.png',
-    href:"https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjLx5TTgvb4AhWCAKIDHU-KBZcYABAAGgJsZQ&ae=2&ohost=www.google.com&cid=CAESbeD2NbuKhUP5SEruJ8pezeiOBQu4FCTwY7PPtNxKRfeVLqWJViL2bGqKkbBvrScyCBTSk2sq776_znWca63N0dhWRJ6uRuuzOldZuQYzxiSWLE-tKXejY2oOoMrzLN8-uBfWXcwQHx2uvVgcu7k&sig=AOD64_12y68Qde7QjRzI8P0NJAXCyBgQzA&q&adurl&ved=2ahUKEwjx3IzTgvb4AhWEw4sKHVJ6AboQ0Qx6BAgDEAE",
-    alt:'facebook',
-    style:'cursor-pointer w-6'
+    id: 1,
+    url: "images/facebook.png",
+    href: "https://www.facebook.com/",
+    alt: "facebook",
+    style: "cursor-pointer w-6",
   },
-    {
-    id:2,
-    url:'images/instagram.png',
-    href:"https://www.instagram.com/",
-    alt:'instagram',
-    style:'cursor-pointer w-6 '
+  {
+    id: 2,
+    url: "images/instagram.png",
+    href: "https://www.instagram.com/",
+    alt: "instagram",
+    style: "cursor-pointer w-6 ",
   },
-    {
-    id:3,
-    url:'images/youtube.png',
-    href:"https://www.youtube.com/",
-    alt:'you tube',
-    style:'cursor-pointer w-7'
+  {
+    id: 3,
+    url: "images/youtube.png",
+    href: "https://www.youtube.com/",
+    alt: "you tube",
+    style: "cursor-pointer w-7",
   },
-    {
-    id:4,
-    url:'images/twitter.png',
-    href:"https://twitter.com/?lang=ru",
-    alt:'twitter',
-    style:'cursor-pointer w-6'
-  }
-])
+  {
+    id: 4,
+    url: "images/twitter.png",
+    href: "https://twitter.com/?lang=ru",
+    alt: "twitter",
+    style: "cursor-pointer w-6",
+  },
+]);
 
 const footer_1 = ref([
   {
