@@ -1,95 +1,115 @@
 <template>
-  <div class="back h-screen">
-    <div class="pt-14 mt-5 ml-20">
+  <div class="back h-screen ">
+    <div 
+        class="
+          md:pt-14 md:mt-5 md:ml-20
+          sm:mt-[170px]">
       <img
         v-show="first"
-        class="absolute w-1/2"
+        class="
+          md:absolute md:w-1/2"
         src="../assets/images/features-sec-2.1.webp"
         alt=""
       />
       <img
         v-show="second"
-        class="absolute w-1/2"
+        class="
+          md:absolute md:w-1/2"
         src="../assets/images/features-sec-2.2.webp"
         alt=""
       />
       <img
         v-show="third"
-        class="absolute w-1/3"
+        class="
+          md:absolute md:w-1/3
+          sm:w-[80%]  sm:h-[50%]"
         src="../assets/images/features-sec-2.3.webp"
         alt=""
       />
     </div>
-    <div class="w-1/3 ml-auto mr-5">
-      <p class="text-4xl font-bold">
-        Start each day feeling calm and in control
-      </p>
-      <p class="text-lg ml-1 pr-10">
+    <div 
+      class="
+        md:w-1/3 md:ml-auto md:mr-5
+        sm:absolute sm:w-full">
+      <p 
+        class="
+          md:text-4xl font-bold
+          sm:text-3xl sm:absolute sm:top-[-540px] sm:pr-24">
+        Start each day feeling calm and in control 
+       </p> 
+      <p 
+        class="
+          md:text-lg md:ml-1 md:pr-10
+          sm:text-xl sm:absolute sm:top-[-470px] sm:pr-40">
         Get a clear overview of everything on your plate and never lose track of
         an important task.
       </p>
     </div>
-    <div class="relative mt-10">
+    <div 
+      class="
+        md:relative md:mt-10
+       sm:mt-10">
       <button
         ref="featBtn1"
-        class="absolute mr-20 right-0 w-96 rounded-xl py-5 px-6 bg-red-200"
-        @click="replaceImg(true, false, false)"
-      >
-        <div class="flex items-center">
-          <img class="w-4" src="../../public/icons/plus.png" alt="" />
-          <p class="text-xl ml-2 font-semibold">Quick Add</p>
+        class="
+          md:absolute md:mr-20 md:right-0 md:w-96 md:rounded-xl md:py-5 md:px-6 bg-red-200
+          sm:w-[28%] sm:rounded-lg sm:p-1 sm:text-center"
+        @click="replaceImg(true, false, false)">
+        <div class="
+          flex items-center
+          sm:pt-1 sm:pl-2">
+          <img class="md:w-4 sm:w-[13px]" src="../../public/icons/plus.png" alt="" />
+          <p class="
+            md:text-xl ml-2 md:font-semibold 
+            sm:text-lg sm:font-semibold">Quick Add</p>
         </div>
-        <p v-show="first" class="ml-7 text-start">
+        <p v-show="first" 
+          class="
+            md:ml-7 text-start md:text-base
+            sm:text-xs sm:text-center">
           lets you capture and organize tasks in seconds.
         </p>
       </button>
       <button
         ref="featBtn2"
         class="
-          absolute
-          mr-20
-          right-0
-          mt-36
-          rounded-xl
-          py-5
-          px-6
-          w-96
-          bg-gray-100
-        "
-        @click="replaceImg(false, true, false)"
-      >
-        <div class="flex items-center">
+          md:absolute md:mr-20 md:right-0 md:w-96 md:rounded-xl md:py-5 md:px-6 bg-gray-100
+          sm:w-[33%] sm:rounded-lg sm:p-1 sm:ml-2"
+        @click="replaceImg(false, true, false)">
+        <div 
+          class="
+            flex items-center
+            sm:pt-1 sm:pl-2">
           <img class="w-4" src="../../public/icons/loop.png" alt="" />
-          <p class="text-xl ml-2 font-semibold">Recurring due dates</p>
+          <p 
+            class="md:text-xl md:ml-2 md:font-semibold
+            sm:text-md sm:ml-1.5 sm:font-semibold">Recurring due dates</p>
         </div>
-        <p v-show="second" class="ml-7 w-80 text-start">
+        <p v-show="second" 
+          class="md:ml-7 md:w-80 md:text-start
+          sm:text-xs sm:text-center">
           help you remember deadlines and build habits.
         </p>
       </button>
       <button
         ref="featBtn3"
         class="
-          absolute
-          mr-20
-          right-0
-          mt-60
-          rounded-xl
-          py-5
-          px-6
-          w-96
-          bg-gray-100
-        "
+          md:absolute md:mr-20 md:right-0 md:w-96 md:rounded-xl md:py-5 md:px-6 bg-gray-100
+          sm:w-[33%] sm:rounded-lg sm:p-1 sm:ml-2"
         @click="replaceImg(false, false, true)"
       >
         <div class="flex items-center">
           <img
-            class="w-4"
+            class="md:w-4 sm:w-[15px] sm:ml-1"
             src="../../public/icons/insert-template.png"
             alt=""
           />
-          <p class="text-xl ml-2 font-semibold">Sections & subtasks</p>
+          <p 
+            class="
+              md:text-xl ml-2 font-semibold">Sections & subtasks</p>
         </div>
-        <p v-show="third" class="ml-7 w-80 text-start">
+        <p v-show="third" class="md:ml-7 md:w-80 md:text-start
+        sm:text-xs sm:text-center">
           ensure that your projects stay neatly organized.
         </p>
       </button>
@@ -119,10 +139,10 @@ export default {
           this.$refs.featBtn3
         );
         if (this.$refs.featBtn3.classList.contains("bg-gray-100")) {
-          this.$refs.featBtn2.classList.remove("mt-24");
-          this.$refs.featBtn2.classList.add("mt-36");
-          this.$refs.featBtn3.classList.add("mt-60");
-          this.$refs.featBtn3.classList.remove("mt-48");
+          this.$refs.featBtn2.classList.remove("md:mt-24");
+          this.$refs.featBtn2.classList.add("md:mt-36");
+          this.$refs.featBtn3.classList.add("md:mt-60");
+          this.$refs.featBtn3.classList.remove("md:mt-48");
         }
       }
       if (val2) {
@@ -131,15 +151,15 @@ export default {
           this.$refs.featBtn1,
           this.$refs.featBtn3
         );
-        if (this.$refs.featBtn3.classList.contains("mt-48")) {
-          this.$refs.featBtn3.classList.remove("mt-48");
-          this.$refs.featBtn3.classList.add("mt-60");
+        if (this.$refs.featBtn3.classList.contains("md:mt-48")) {
+          this.$refs.featBtn3.classList.remove("md:mt-48");
+          this.$refs.featBtn3.classList.add("md:mt-60");
         }
-        this.$refs.featBtn2.classList.remove("mt-32");
-        this.$refs.featBtn2.classList.remove("mt-36");
-        this.$refs.featBtn2.classList.add("mt-24");
-        this.$refs.featBtn3.classList.add("mt-60");
-        console.log(this.$refs.featBtn3.classList)
+        this.$refs.featBtn2.classList.remove("md:mt-32");
+        this.$refs.featBtn2.classList.remove("md:mt-36");
+        this.$refs.featBtn2.classList.add("md:mt-24");
+        this.$refs.featBtn3.classList.add("md:mt-60");
+        // console.log(this.$refs.featBtn3.classList)
       }
       if (val3) {
         this.replaseColor(
@@ -147,14 +167,14 @@ export default {
           this.$refs.featBtn1,
           this.$refs.featBtn2
         );
-        if (this.$refs.featBtn3.classList.contains("mt-28")) {
-          this.$refs.featBtn3.classList.remove("mt-28");
-          this.$refs.featBtn3.classList.add("mt-60");
+        if (this.$refs.featBtn3.classList.contains("md:mt-28")) {
+          this.$refs.featBtn3.classList.remove("md:mt-28");
+          this.$refs.featBtn3.classList.add("md:mt-60");
         }
-        this.$refs.featBtn2.classList.remove("mt-36");
-        this.$refs.featBtn2.classList.add("mt-24");
-        this.$refs.featBtn3.classList.remove("mt-60");
-        this.$refs.featBtn3.classList.add("mt-48");
+        this.$refs.featBtn2.classList.remove("md:mt-36");
+        this.$refs.featBtn2.classList.add("md:mt-24");
+        this.$refs.featBtn3.classList.remove("md:mt-60");
+        this.$refs.featBtn3.classList.add("md:mt-48");
         console.log(this.$refs.featBtn3.classList);
       }
     },
