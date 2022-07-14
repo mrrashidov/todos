@@ -1,22 +1,36 @@
+<script setup lang="ts">
+import ResourcesDropdown from "./UI/ResourcesDropdown.vue";
+import SvgLogos from "./UI/SvgLogos.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goLogin = () => {
+  router.push("/auth/login");
+};
+</script>
+
 <template>
   <header>
-    <div class="lg:w-[1200px] mx-auto py-2">
-      <div class="w-full flex justify-between items-center">
+    <div class="lg:w-[90w] mx-auto py-2">
+      <div
+        class="flex w-[100vw] px-[10vw] py-2 justify-between items-center fixed top-0 bg-white z-50"
+      >
         <div class="w-[70%] flex items-center">
           <logo class="mx-8"></logo>
           <ul class="flex">
             <li
-              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-[#f2f2f2]"
+              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
             >
               Features
             </li>
             <li
-              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-[#f2f2f2]"
+              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
             >
               Templates
             </li>
             <li
-              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-[#f2f2f2]"
+              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
             >
               For Teams
             </li>
@@ -24,7 +38,7 @@
               <ResourcesDropdown />
             </li>
             <li
-              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-[#f2f2f2]"
+              class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
             >
               Pricing
             </li>
@@ -33,7 +47,7 @@
         <div class="w-1/5 flex">
           <button
             @click="goLogin()"
-            class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-[#f2f2f2]"
+            class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
           >
             Log in
           </button>
@@ -42,40 +56,38 @@
       </div>
       <div class="w-full flex flex-col items-center justify-center my-40">
         <h1
-          class="text-[52px] leading-[57px] mb-4 font-semibold w-[500px] font-primary text-center"
+          class="text-5xl leading-none mb-4 font-semibold w-[40vw] font-primary text-center"
         >
           Organize your work and life, finally.
         </h1>
-        <h3
-          class="w-[475px] mb-6 h-[57px] text-[19px] text-center font-primary px-1"
-        >
+        <h3 class="w-[35vw] mb-6 h-14 text-lg text-center font-primary px-1">
           Become focused, organized, and calm with Todoist. The world’s #1 task
           manager and to-do list app.
         </h3>
         <home-button></home-button>
       </div>
 
-      <div class="w-full mt-40 relative flex justify-between items-center">
+      <div class="w-[full] mt-40 relative flex justify-between items-center">
         <img
           src="/images/bg-left_ec42cae325f6e50083f84e73af60ebc0.webp"
-          class="h-[430px] w-[30%]"
+          class="h-[65vh] w-[30%]"
           alt="bg-left"
         />
         <img
           src="/images/illustration_w_1415.webp"
-          class="absolute left-[10%] bottom-0 h-[540px] w-[80%]"
+          class="absolute left-[10%] bottom-0 h-[85vh] w-[80%]"
           alt="bg-"
         />
         <img
           src="/images/bg-right_e970a806f622dc0514e793511e4fdf0c.webp"
-          class="h-[430px] w-[30%]"
+          class="h-[65vh] w-[30%]"
           alt="bg-left"
         />
       </div>
     </div>
     <section>
       <img
-        class="-bottom-[400px] absolute h-[50px] bg-cover bg-no-repeat"
+        class="-bottom-[52.5vh] absolute h-[9vh] bg-cover bg-no-repeat"
         src="images/divider_f625c1fef62e9c77f1e13273b39a5512.webp"
         alt=""
       />
@@ -103,17 +115,3 @@
     </section>
   </header>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import ResourcesDropdown from "./UI/ResourcesDropdown.vue";
-
-export default defineComponent({
-  components: { ResourcesDropdown },
-  methods: {
-    goLogin() {
-      this.$router.push("/auth/login");
-    },
-  },
-});
-</script>
