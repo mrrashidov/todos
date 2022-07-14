@@ -1,6 +1,23 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <p>This is the home page</p>
-  </div>
+  <Header />
+  <MainContentImg />
+  <MainContent />
+  <div class="lg:w-[1200px] mx-auto"></div>
+  <Footer />
 </template>
+
+<script lang="ts">
+import Header from "@/components/Header.vue";
+import Footer from "@/components/footer.vue";
+import MainContent from "@/components/MainContent.vue";
+import MainContentImg from "@/components/MainContentImg.vue";
+
+export default {
+  components: {
+    Header,
+    Footer,
+    MainContent,
+    MainContentImg,
+  },
+};
+</script>
