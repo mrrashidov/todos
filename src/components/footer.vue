@@ -4,7 +4,7 @@
       class="footerImgSection w-screen max-w-full h-1/3 flex justify-center items-center"
     >
       <div class="mr-20">
-        <img src="@/assets/footer.png" alt="img" class="w-96 mb-20" />
+        <img src="images/footer.png" alt="img" class="w-96 mb-20" />
       </div>
       <div class="w-[300px] h-auto flex flex-wrap md:w-[500px]">
         <h1 class="font-bold text-[25px] md:text-[40px]">
@@ -15,7 +15,6 @@
         >
           Open Todist
         </button>
-
       </div>
     </div>
 
@@ -59,29 +58,13 @@
               </g>
             </svg>
           </div>
-          <p class="text-[18px] md:text-lg">
+          <p class="text-[18px] mt-5 md:text-lg">
             Join millions of people who organize work and life with Todoist.
           </p>
-          <ul
-            class="flex flex-wrap justify-between w-[130px] items-center mt-5"
-          >
-            <li v-for="item in footer_icons" :key="item.id">
+          <ul class="flex flex-wrap w-44 items-center mt-5 justify-between">
+            <li v-for="item in images" :key="item.id">
               <a :href="item.href">
-                <svg
-                  :class="item.class"
-                  :width="item.width"
-                  :alt="item.alt"
-                  :height="item.height"
-                  :viewBox="item.viewBox"
-                  :xmnls="item.xmlns"
-                >
-                  <path
-                    :d="item.d"
-                    :fill="item.fill"
-                    :file-rule="item.fill_rule"
-                    :clip-rule="item.clip_rule"
-                  />
-                </svg>
+                <img :src="item.url" :alt="item.alt" :class="item.style" />
               </a>
             </li>
           </ul>
@@ -98,11 +81,11 @@
             class="mt-[15px] w-fit h-[30px] cursor-pointer"
             :class="[
               item.id == 1
-                ? 'text-sm text-[#575757] '
-                : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black w-auto',
+                ? 'text-sm text-[#575757]'
+                : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black ',
             ]"
             v-for="item in footer_1"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -116,7 +99,7 @@
                 : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black ',
             ]"
             v-for="item in footer_2"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -130,7 +113,7 @@
                 : ' text-[#1F1F1F] text-lg hover:border-b-2 border-black ',
             ]"
             v-for="item in footer_3"
-            :key="item"
+            :key="item.id"
           >
             {{ item.name }}
           </li>
@@ -153,13 +136,13 @@
           class="border-[1px] border-solid border-[#6b6b6b] w-[0px] h-[12px]"
         ></div>
         <p class="text-lg text-[#575757] cursor-pointer">Terms</p>
-        <img src="@/assets/copyright.png" alt="image" class="w-3 h-3 ml-3" />
+        <img src="images/copyright.png" alt="image" class="w-3 h-3 ml-3" />
         <p class="text-sm text-[#575757] cursor-pointer">Doist Inc</p>
       </div>
       <div
         class="xl:w-36 relative flex justify-evenly items-center bg-[#cdcdcd] rounded-lg"
       >
-        <img src="@/assets/internet.png" alt="image" class="w-5 h-5 ml-3" />
+        <img src="images/internet.png" alt="image" class="w-5 h-5 ml-3" />
 
         <select
           class="form-select cursor-pointer block w-full px-3 py-1.5 text-base focus:border-blue-600 font-normal text-gray-700 bg-[#cdcdcd] bg-clip-padding border-gray-300 rounded-lg transition ease-in-out outline-none m-0 focus:text-gray-700"
@@ -177,13 +160,13 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-const footer_icons = ref([
+const images = ref([
   {
     id: 1,
-    class:
-      "rounded-full transition ease-in-out delay-10 fill-none bg-[#575757] hover:bg-[#000000]",
+    url: "images/facebook.png",
+    href: "https://www.facebook.com/",
+    style: "cursor-pointer w-6",
     alt: "facebook",
-    href: "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjtyYy7m_P4AhWUBaIDHQcnCQgYABAAGgJsZQ&ae=2&ohost=www.google.com&cid=CAESbeD2qjc2RlMuLiXrGBxBMuM-QcqvlqRmrvKuMStQrLl_5X2FL7HJ-w96BlNMp8no2kCUDlYq05JB-aQruoODlhHxHSTkIu-f37EdKg5WHe7VSTR7iPm8c-lxIBfiYGg1Pq_ooW_bPsT3ZFJ8TbI&sig=AOD64_1mk0nfQ421sW_10x3nQXwKxXkxJQ&q&adurl&ved=2ahUKEwi9wIS7m_P4AhUDqYsKHUeaAp8Q0Qx6BAgDEAE",
     width: "25",
     height: "25",
     viewBox: "0 0 11 20",
@@ -193,10 +176,10 @@ const footer_icons = ref([
   },
   {
     id: 2,
-    class:
-      "fill-[#575757] transition ease-in-out delay-10 hover:fill-[#000000]",
-    alt: "instagram",
+    url: "images/instagram.png",
     href: "https://www.instagram.com/",
+    style: "cursor-pointer w-6 ",
+    alt: "instagram",
     width: "25",
     height: "25",
     viewBox: "0 0 20 20",
@@ -205,10 +188,10 @@ const footer_icons = ref([
   },
   {
     id: 3,
-    class:
-      "fill-[#575757] transition ease-in-out delay-10 hover:fill-[#000000]",
+    url: "images/youtube.png",
+    href: "https://www.youtube.com/",
+    style: "cursor-pointer w-7",
     alt: "you tube",
-    href: "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjtyYy7m_P4AhWUBaIDHQcnCQgYABAAGgJsZQ&ae=2&ohost=www.google.com&cid=CAESbeD2qjc2RlMuLiXrGBxBMuM-QcqvlqRmrvKuMStQrLl_5X2FL7HJ-w96BlNMp8no2kCUDlYq05JB-aQruoODlhHxHSTkIu-f37EdKg5WHe7VSTR7iPm8c-lxIBfiYGg1Pq_ooW_bPsT3ZFJ8TbI&sig=AOD64_1mk0nfQ421sW_10x3nQXwKxXkxJQ&q&adurl&ved=2ahUKEwi9wIS7m_P4AhUDqYsKHUeaAp8Q0Qx6BAgDEAE",
     width: "29",
     height: "20",
     viewBox: "0 0 29 20",
@@ -216,6 +199,13 @@ const footer_icons = ref([
     d: "M28.3976 3.08479C28.2314 2.49051 27.9145 1.94921 27.4777 1.51333C27.0408 1.07744 26.4989 0.761728 25.9042 0.596762C23.6721 2.8529e-05 14.6987 2.86733e-05 14.6987 2.86733e-05C14.6987 2.86733e-05 5.74231 -0.014286 3.48689 0.596762C2.89319 0.762452 2.35228 1.07849 1.91644 1.51434C1.48059 1.95019 1.16455 2.4911 0.998857 3.08479C0.574971 5.36993 0.3662 7.68978 0.375284 10.0139C0.371148 12.3268 0.579886 14.6352 0.998857 16.9099C1.16508 17.5039 1.48122 18.0452 1.91691 18.4818C2.35261 18.9185 2.89324 19.2358 3.48689 19.4033C5.71905 20 14.6987 20 14.6987 20C14.6987 20 23.6497 20 25.9042 19.4033C26.4988 19.2365 27.0405 18.9195 27.4772 18.4828C27.9139 18.0462 28.2308 17.5045 28.3976 16.9099C28.8083 14.6366 29.0087 12.3248 28.9943 10.0139C29.0087 7.68779 28.8127 5.37242 28.3976 3.08479ZM11.8322 14.2966V5.71239L19.3017 10.0139L11.8322 14.2966Z",
     fill_rule: "evenodd",
     clip_rule: "evenodd",
+  },
+  {
+    id: 4,
+    url: "images/twitter.png",
+    href: "https://twitter.com/?lang=ru",
+    alt: "twitter",
+    style: "cursor-pointer w-6",
   },
 ]);
 

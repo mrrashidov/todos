@@ -1,5 +1,5 @@
 <template>
-  <div class="w-5/6   mx-auto">
+  <div class="w-5/6 mx-auto">
     <div class="w-full h-20 bg-white flex items-center">
       <svg
         height="32"
@@ -34,28 +34,25 @@
         </g>
       </svg>
     </div>
-    <div class="mt-10   w-4/5 mx-auto flex flex-wrap h-auto">
-      <div class="w-80 mx-auto text-center h-20 flex flex-wrap justify-center">
+    <div class="mt-10 w-4/5 mx-auto flex flex-wrap h-auto">
+      <div class="w-1/2 mx-auto text-center h-20 flex flex-wrap justify-center">
         <h1 class="font-semibold font-primary text-[20px]">
-          How do you plan to use Todoist
+          How experienced are you with productivity apps?
         </h1>
-        <p class="font-primary">Choose all that apply</p>
+        <p class="font-primary">Choose whichever applies most</p>
       </div>
 
-      <form
-        class="w-4/5 mx-auto  h-full flex justify-center flex-wrap"
-      >
+      <form class="w-4/5 mx-auto h-full flex justify-center flex-wrap">
         <div
           class="w-56 h-72 m-5 rounded-lg p-3 border"
           v-for="item in img"
           :key="item.id"
         >
-       
           <div class="flex justify-end">
             <input
               type="checkbox"
               class="w-5 h-5"
-              id="check"  
+              id="check"
               @click="enable"
               ref="elementA"
             />
@@ -66,20 +63,26 @@
           </h1>
         </div>
         <div
-           class=" w-11/12  h-14  bg-lightRed rounded-lg flex items-center justify-evenly mt-5 sm:flex-wrap"
+          class="w-11/12 h-14 bg-lightRed rounded-lg flex items-center justify-evenly mt-5 sm:flex-wrap"
         >
           <div
             class="w-9 h-9 rounded-full bg-white flex items-center justify-center"
           >
-            <img src="images/idea.png" alt="image" class="w-7 h-7 " />
+            <img src="images/idea.png" alt="image" class="w-7 h-7" />
           </div>
-          <p class="font-medium text-sm 2xl:text-lg font-primary hidden  2xl:block  ">
+          <p
+            class="font-medium text-sm 2xl:text-lg font-primary hidden 2xl:block"
+          >
             Please answer to quick questions to ensure you'll have a great start
             with Todoist
           </p>
-          <img src="images/smile.png" alt="smile man" class="w-7 h-7 hidden xl:block" />
-        </div>  
-        <button 
+          <img
+            src="images/smile.png"
+            alt="smile man"
+            class="w-7 h-7 hidden xl:block"
+          />
+        </div>
+        <button
           type="submit"
           :disabled="man"
           @click="OnboardProficiency"
@@ -89,34 +92,20 @@
         </button>
       </form>
     </div>
-    
-  <ModalOnboardUseCase />
   </div>
-  
-
 </template>
 
 <script lang="ts" setup>
-import ModalOnboardUseCase from '../components/UI/ModalOnboardUseCase.vue'
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
+import { ref } from "vue";
 const router = useRouter();
 
-
 const OnboardProficiency = () => {
-        router.push('/register/OnboardProficiency')
-    }
+  router.push("/app/onboard/thank-you");
+};
 
-
-
-
-
-
-import {ref} from 'vue'
-
- let man = ref(true)
-let elementA = ref(null)
-
-
+let man = ref(true);
+let elementA = ref();
 
 function enable() {
   let check = elementA.value[0].checked;
@@ -124,31 +113,30 @@ function enable() {
   let check_2 = elementA.value[2].checked;
 
   if (check || check_1 || check_2) {
-         man.value=false
+    man.value = false;
   } else {
-     man.value=true
-  }   
-  
+    man.value = true;
   }
+}
 
 const img = [
   {
     id: 1,
-    url: "images/onboard1.png",
-    title: "work",
-    h_1: "Work",
+    url: "images/onboard4.png",
+    title: "Beginner",
+    h_1: "Beginner",
   },
   {
     id: 2,
-    url: "images/onboard2.png",
-    title: "personal",
-    h_1: "Personal",
+    url: "images/onboard5.png",
+    title: "Intermediate",
+    h_1: "Intermediate",
   },
   {
     id: 3,
-    url: "images/onboard6.png",
-    title: "education",
-    h_1: "Education",
+    url: "images/onboard3.png",
+    title: "Productivy Pro",
+    h_1: "Productivity Pro",
   },
 ];
 </script>
