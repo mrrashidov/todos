@@ -24,11 +24,11 @@
     <div 
       class="
         md:w-1/3 md:ml-auto md:mr-5 md:right-0 md:relative md:top-0
-        sm:absolute sm:w-full sm:pb-10 sm:top-[210%]">
+        sm:absolute sm:w-full sm:pb-10 sm:top-[220%]">
       <p class="text-4xl font-bold">
         Share the workload
       </p>
-      <p class="text-lg ml-1 pr-10">
+      <p class="text-lg ml-1 sm:mr-16 md:pr-10">
        From business ventures to grocery lists, divide and conquer your daily tasks in shared projects.
       </p>
     </div>
@@ -81,38 +81,32 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "FeaturesFourthSec",
-  data() {
-    return {
-      first: true,
-      second: false,
-    };
-  },
-  methods: {
-    replaceImg(val1, val2) {
-      this.first = val1;
-      this.second = val2;
+
+<script setup>
+  import { ref } from 'vue'
+  let first=  ref(true)
+  let second=  ref(false)
+
+  function replaceImg(val1, val2) {
+      first = val1;
+      second = val2;
       if (val1) {
-        this.replaseColor(this.$refs.featBtn1, this.$refs.featBtn2);
-        this.$refs.featBtn2.classList.remove("md:mt-24");
-        this.$refs.featBtn2.classList.add("md:mt-36");
+        replaseColor($refs.featBtn1, $refs.featBtn2);
+        $refs.featBtn2.classList.remove("md:mt-24");
+        $refs.featBtn2.classList.add("md:mt-36");
       }
       if (val2) {
-        this.replaseColor(this.$refs.featBtn2, this.$refs.featBtn1);
-        this.$refs.featBtn2.classList.remove("md:mt-36");
-        this.$refs.featBtn2.classList.add("md:mt-24");
+        replaseColor($refs.featBtn2, $refs.featBtn1);
+        $refs.featBtn2.classList.remove("md:mt-36");
+        $refs.featBtn2.classList.add("md:mt-24");
       }
-    },
-    replaseColor(btn1, btn2) {
+    }
+    function replaseColor(btn1, btn2) {
       btn1.classList.remove("bg-gray-100");
       btn1.classList.add("bg-red-200");
       btn2.classList.remove("bg-red-200");
       btn2.classList.add("bg-gray-100");
-    },
-  },
-};
+    }
 </script>
 <style scoped>
 .back {

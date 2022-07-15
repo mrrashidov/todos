@@ -119,48 +119,44 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "FeaturesSecondSec",
-  data() {
-    return {
-      first: true,
-      second: false,
-      third: false,
-    };
-  },
-  methods: {
-    replaceImg(val1, val2, val3) {
-      this.first = val1;
-      this.second = val2;
-      this.third = val3;
+
+<script setup>
+import { ref } from 'vue'
+    let first=  ref(true)
+    let second= ref(false)
+    let third= ref(false)
+
+    function replaceImg(val1, val2, val3) {
+      first = val1;
+      second = val2;
+      third = val3;
       if (val1) {
-        this.replaseColor(
-          this.$refs.featBtn1,
-          this.$refs.featBtn2,
-          this.$refs.featBtn3
+        replaseColor(
+          $refs.featBtn1,
+          $refs.featBtn2,
+          $refs.featBtn3
         );
-        if (this.$refs.featBtn3.classList.contains("bg-gray-100")) {
-          this.$refs.featBtn2.classList.remove("md:mt-24");
-          this.$refs.featBtn2.classList.add("md:mt-36");
-          this.$refs.featBtn3.classList.add("md:mt-60");
-          this.$refs.featBtn3.classList.remove("md:mt-48");
+        if ($refs.featBtn3.classList.contains("bg-gray-100")) {
+          $refs.featBtn2.classList.remove("md:mt-24");
+          $refs.featBtn2.classList.add("md:mt-36");
+          $refs.featBtn3.classList.add("md:mt-60");
+          $refs.featBtn3.classList.remove("md:mt-48");
         }
       }
       if (val2) {
-        this.replaseColor(
-          this.$refs.featBtn2,
-          this.$refs.featBtn1,
-          this.$refs.featBtn3
+        replaseColor(
+          $refs.featBtn2,
+          $refs.featBtn1,
+          $refs.featBtn3
         );
-        if (this.$refs.featBtn3.classList.contains("md:mt-48")) {
-          this.$refs.featBtn3.classList.remove("md:mt-48");
-          this.$refs.featBtn3.classList.add("md:mt-60");
+        if ($refs.featBtn3.classList.contains("md:mt-48")) {
+          $refs.featBtn3.classList.remove("md:mt-48");
+          $refs.featBtn3.classList.add("md:mt-60");
         }
-        this.$refs.featBtn2.classList.remove("md:mt-32");
-        this.$refs.featBtn2.classList.remove("md:mt-36");
-        this.$refs.featBtn2.classList.add("md:mt-24");
-        this.$refs.featBtn3.classList.add("md:mt-60");
+        $refs.featBtn2.classList.remove("md:mt-32");
+        $refs.featBtn2.classList.remove("md:mt-36");
+        $refs.featBtn2.classList.add("md:mt-24");
+        $refs.featBtn3.classList.add("md:mt-60");
         // console.log(this.$refs.featBtn3.classList)
       }
       if (val3) {
@@ -177,10 +173,10 @@ export default {
         this.$refs.featBtn2.classList.add("md:mt-24");
         this.$refs.featBtn3.classList.remove("md:mt-60");
         this.$refs.featBtn3.classList.add("md:mt-48");
-        console.log(this.$refs.featBtn3.classList);
       }
-    },
-    replaseColor(btn1, btn2, btn3) {
+    };
+
+    function replaseColor(btn1, btn2, btn3) {
       btn1.classList.remove("bg-gray-100");
       btn1.classList.add("bg-red-200");
       btn2.classList.remove("bg-red-200");
@@ -188,10 +184,8 @@ export default {
 
       btn2.classList.add("bg-gray-100");
       btn3.classList.add("bg-gray-100");
-    },
-    moveBtn(val1, val2) {},
-  },
-};
+    }
+
 </script>
 <style scoped>
 .back {
