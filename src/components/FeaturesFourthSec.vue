@@ -1,20 +1,30 @@
 <template>
   <div class="back h-screen">
-    <div class=" pt-1 ml-72">
+    <div 
+      class="
+        md:pt-14 md:mt-5 md:-ml-36
+        sm:pt-32 sm:translate-x-1/3 sm:ml-0">
       <img
         v-show="first"
-        class="absolute w-1/4"
+        class="
+          md:absolute md:w-1/5
+          sm:w-1/3"
         src="../assets/images/delegate-tasks.webp"
         alt=""
       />
       <img
         v-show="second"
-        class="absolute w-1/4"
+        class="
+          md:absolute md:w-1/4
+          sm:w-1/3"
         src="../assets/images/notifications.webp"
         alt=""
       />
     </div>
-    <div class="w-1/3 ml-auto mt-28 mr-20">
+    <div 
+      class="
+        md:w-1/3 md:ml-auto md:mr-5 md:right-0 md:relative md:top-0
+        sm:absolute sm:w-full sm:pb-10 sm:top-[210%]">
       <p class="text-4xl font-bold">
         Share the workload
       </p>
@@ -22,41 +32,49 @@
        From business ventures to grocery lists, divide and conquer your daily tasks in shared projects.
       </p>
     </div>
-    <div class="relative mt-10 mr-16">
+    <div  
+        class="relative mt-10 md:mr-10
+        sm:ml-10">
       <button
         ref="featBtn1"
-        class="absolute mr-20 right-0 w-96 rounded-xl py-5 px-6 bg-red-200"
-        @click="replaceImg(true, false)"
-      >
-        <div class="flex items-center">
-          <img class="w-5" src="../../public/icons/user-plus.png" alt="" />
-          <p class="text-xl ml-2 font-semibold">Delegate tasks</p>
+        class="
+          md:absolute md:mr-20 md:right-0 md:w-96 md:rounded-xl md:py-5 md:px-6 bg-red-200
+          sm:w-[45%] sm:rounded-lg sm:p-1 sm:text-center"
+        @click="replaceImg(true, false)">
+        <div class="
+          flex items-center 
+          sm:pt-1 sm:pl-2">
+          <img class="md:w-4 sm:w-[15px]" src="../../public/icons/user-plus.png" alt="" />
+          <p class="
+            md:text-xl ml-2 md:font-semibold 
+            sm:text-md sm:font-semibold">Delegate tasks</p>
         </div>
-        <p v-show="first" class="ml-7 text-start">
+        <p v-show="first" 
+          class="
+            md:ml-7 md:text-start md:text-base
+            sm:text-xs sm:text-start sm:ml-7">
           to other people and free up your mental space.
         </p>
       </button>
       <button
         ref="featBtn2"
         class="
-          absolute
-          mr-20
-          right-0
-          mt-36
-          rounded-xl
-          py-5
-          px-6
-          w-96
-          bg-gray-100
-        "
-        @click="replaceImg(false, true)"
-      >
-        <div class="flex items-center">
-          <img class="w-4" src="../../public/icons/bell.png" alt="" />
-          <p class="text-xl ml-2 font-semibold">Notifications</p>
+          md:absolute md:mr-20 md:right-0 md:mt-36 md:w-96 md:rounded-xl md:py-5 md:px-6 bg-gray-100
+          sm:w-[45%] sm:rounded-lg sm:p-1 sm:ml-2"
+        @click="replaceImg(false, true)">
+        <div 
+          class="
+            flex items-center
+            sm:pt-1 sm:pl-2">
+          <img class="w-4" src="../../public/icons/loop.png" alt="" />
+          <p 
+            class="md:text-xl md:ml-2 md:font-semibold
+            sm:text-md sm:ml-1.5 sm:font-semibold">Recurring due dates</p>
         </div>
-        <p v-show="second" class="ml-7 w-80 text-start">
-          let you know when people post comments, complete tasks, and more.
+        <p v-show="second" 
+          class="md:ml-7 md:text-base md:w-80 md:text-start
+          sm:text-xs sm:text-center">
+          help you remember deadlines and build habits.
         </p>
       </button>
     </div>
@@ -78,13 +96,13 @@ export default {
       this.second = val2;
       if (val1) {
         this.replaseColor(this.$refs.featBtn1, this.$refs.featBtn2);
-        this.$refs.featBtn2.classList.remove("mt-24");
-        this.$refs.featBtn2.classList.add("mt-32");
+        this.$refs.featBtn2.classList.remove("md:mt-24");
+        this.$refs.featBtn2.classList.add("md:mt-36");
       }
       if (val2) {
         this.replaseColor(this.$refs.featBtn2, this.$refs.featBtn1);
-        this.$refs.featBtn2.classList.remove("mt-32");
-        this.$refs.featBtn2.classList.add("mt-24");
+        this.$refs.featBtn2.classList.remove("md:mt-36");
+        this.$refs.featBtn2.classList.add("md:mt-24");
       }
     },
     replaseColor(btn1, btn2) {

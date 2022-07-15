@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="md:overflow-x-hidden sm:ml-10 sm:mr-10 md:ml-0 md:mr-0">
     <features-second-sec/>
     <features-third-sec/>
     <features-fourth-sec/>
