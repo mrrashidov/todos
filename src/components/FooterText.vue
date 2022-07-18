@@ -1,3 +1,10 @@
+<script setup>
+import Text from "../components/SlotText.vue"
+import Slotlink from "../components/SlotLink.vue"
+import DateSlot from "../components/DateSlots.vue"
+</script>
+
+
 <template>
   <div class="md:grid md:grid-rows-4 md:grid-flow-col md:gap-4 md:mt-20 md:ml-20 md:w-72
              sm:grid sm:grid-rows-1 sm:w-96 sm:m-auto">
@@ -68,20 +75,6 @@
 </div>
   
 </template>
-
-<script>
-import Text from "../components/SlotText.vue"
-import Slotlink from "../components/SlotLink.vue"
-import DateSlot from "../components/DateSlots.vue"
-export default {
-    name: "FooterText",
-    components: {
-        Text, 
-        Slotlink, 
-        DateSlot
-        }
-}
-</script>
 
 <style>
 

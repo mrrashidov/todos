@@ -9,11 +9,7 @@
   </div>
 </template>
 
-<script>
-export default {
-    name : "TopImg"
-}
-</script>
+<script></script>
 
 <style>
 </style>

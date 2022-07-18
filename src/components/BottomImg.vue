@@ -1,3 +1,9 @@
+<script setup>
+import { computed } from '@vue/runtime-core'
+import HomeButton from '../components/UI/HomeButton.vue'
+
+</script>
+
 <template>
   <div class="text-gray-900 md:mt-20 bg-gray-100 md:flex md:flex-nowrap">
       <div class="md:ml-36 md:mt-24 md:w-2/5 | sm:my-auto pt-14">
@@ -12,15 +18,6 @@
       </div>
   </div>
 </template>
-
-<script>
-import { computed } from '@vue/runtime-core'
-import HomeButton from '../components/UI/HomeButton.vue'
-export default {
-    name: "BottomImg",
-    components:{HomeButton}
-}
-</script>
 
 <style>
 .back{
