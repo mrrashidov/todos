@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-zinc-50 sm:visible sm:w-[50%] md:visible md:w-[40%] lg:visible lg:w-1/5 xl:visible xl:w-1/5 2xl:visible 2xl:w-1/5 invisible h-[90vh] pl-[3vw] group"
+    class="bg-zinc-50 sm:hidden sm:w-[50%] md:hidden md:w-[40%] lg:block lg:w-1/5 xl:block xl:w-1/5 2xl:block 2xl:w-1/5 hidden h-[90vh] pl-[3vw] group"
   >
     <div class="pt-6">
       <ul>
