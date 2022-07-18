@@ -125,8 +125,31 @@
     </div>
   </div>
   <Sidebar />
+  <div v-show="checked">
+    <div
+      class="w-full h-full fixed top-0 left-0 flex justify-center items-center bg-[#7F7F7F] opacity-30"
+    ></div>
+    <div>
+      <AddProject
+        class="rounded-xl w-full h-full flex justify-center items-center"
+      />
+    </div>
+  </div>
+  <div></div>
 </template>
 
 <script setup lang="ts">
 import Sidebar from "./UI/Sidebar.vue";
+import AddProject from "./UI/AddProject.vue";
+
+let checked = false;
+
+function enableChecker() {
+  checked = true;
+  console.log(checked);
+}
+function disableChecker() {
+  checked = false;
+  console.log(checked);
+}
 </script>
