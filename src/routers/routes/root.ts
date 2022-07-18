@@ -15,7 +15,7 @@ export const root = [
     component: () => import("@/components/Register/OnboardProficiency.vue"),
   },
   {
-    path: "/app/onboard/thank-you",
-    component: () => import("@/components/Register/OnboardThankyou.vue"),
-  },
+    path: "/app/settings/account",
+    component: () => import("@/views/LoginSetting.vue")
+  }
 ];
