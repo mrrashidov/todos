@@ -1,7 +1,7 @@
 <template>
   <div v-if="checked" class="absolute top-0">
     <div
-      class="w-[30vw] h-[80vh] border-solid border-black border rounded-xl bg-white"
+      class="lg:w-[30vw] h-[80vh] border-solid border-black border rounded-xl bg-white"
     >
       <div class="flex py-2 justify-between bg-zinc-50 border-b-2 rounded-t-xl">
         <span class="p-3">Add Project</span>
@@ -29,12 +29,12 @@
         </div>
         <div class="flex flex-col py-2">
           <span>Colors</span>
-          <Listbox class="z-50" v-model="selectedPerson">
+          <Listbox class="z-50" v-model="selectedColor">
             <div class="relative mt-1">
               <ListboxButton
                 class="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
               >
-                <span class="block truncate">{{ selectedPerson.name }}</span>
+                <span class="block truncate">{{ selectedColor.name }}</span>
                 <span
                   class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
                 >
@@ -55,9 +55,9 @@
                 >
                   <ListboxOption
                     v-slot="{ active, selected }"
-                    v-for="person in people"
-                    :key="person.name"
-                    :value="person"
+                    v-for="color in colors"
+                    :key="color.name"
+                    :value="color"
                     as="template"
                   >
                     <li
@@ -73,7 +73,7 @@
                           selected ? 'font-medium' : 'font-normal',
                           'block truncate',
                         ]"
-                        >{{ person.name }}</span
+                        >{{ color.name }}</span
                       >
                       <span
                         v-if="selected"
@@ -410,16 +410,16 @@ import {
 } from "@headlessui/vue";
 import { CheckIcon, SelectorIcon } from "@heroicons/vue/solid";
 
-const people = [
-  { name: "Wade Cooper" },
-  { name: "Arlene Mccoy" },
-  { name: "Devon Webb" },
-  { name: "Tom Cook" },
-  { name: "Tanya Fox" },
-  { name: "Hellen Schmidt" },
+const colors = [
+  { name: "Red" },
+  { name: "Green" },
+  { name: "Blue" },
+  { name: "White" },
+  { name: "Black" },
+  { name: "Yellow" },
 ];
 
-const selectedPerson = ref(people[0]);
+const selectedColor = ref(colors[0]);
 const enabled = ref(false);
 let checked = true;
 

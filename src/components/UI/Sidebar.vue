@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-zinc-50 w-[20vw] h-[90vh] pl-[3vw] group">
+  <div
+    class="bg-zinc-50 sm:visible sm:w-[50%] md:visible md:w-[40%] lg:visible lg:w-1/5 xl:visible xl:w-1/5 2xl:visible 2xl:w-1/5 invisible h-[90vh] pl-[3vw] group"
+  >
     <div class="pt-6">
       <ul>
         <li>
