@@ -7,6 +7,8 @@ import SettingAccount from '@/views/SettingAccount.vue'
 <template>
     <div class="md:w-[80%] md:ml-auto md:mt-16 flex">
         <setting-bar/>
-        <setting-account/>
+        <router-view>
+            <setting-account/>
+        </router-view>
     </div>
 </template>

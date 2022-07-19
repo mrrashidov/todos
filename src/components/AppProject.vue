@@ -117,7 +117,8 @@
       </div>
       <div class="user_avatar big settings_avatar mx-0.5">
         <img
-          class="h-6 rounded-md m-1 cursor-pointer"
+          @click="showAcc = !showAcc"
+          class="h-10 rounded-full m-1 cursor-pointer"
           src="https://dcff1xvirvpfp.cloudfront.net/08f9e3289a7c459d80f17786674c0794_big.jpg"
           alt="Rustam"
         />
@@ -125,8 +126,16 @@
     </div>
   </div>
   <Sidebar />
+  <account-section v-if="showAcc"></account-section>
 </template>
 
-<script setup lang="ts">
+<script setup >
+import {ref} from 'vue'
 import Sidebar from "./UI/Sidebar.vue";
+import AccountSection from './AccountSection.vue'
+let showAcc = ref(false);
+function nima(){
+  showAcc = !showAcc
+  console.log(showAcc)
+ }
 </script>
