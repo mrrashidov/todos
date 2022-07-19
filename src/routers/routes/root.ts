@@ -19,5 +19,9 @@ export const root = [
   {
     path: "/app/settings/account",
     component: () => import("@/views/LoginSetting.vue")
+  },
+  {
+    path: "/app/settings/subscription",
+    component: () => import("@/views/SettingSubscription.vue")
   }
 ];

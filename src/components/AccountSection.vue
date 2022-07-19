@@ -1,11 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
+const route = useRoute()
+function toRout(root){
+    router.push(`${root}`)
+}
 </script>
 
 <template>
     <div
-        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-[64%] absolute md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
+        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-[70%] absolute md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
         <div>
             <div class="flex items-center">
                 <img class="h-14 rounded-full m-1 cursor-pointer"
@@ -15,7 +20,9 @@ import { ref } from 'vue'
                     <p>userExample@gmail.com</p>
                 </div>
             </div>
-            <div class="md:mt-3 cursor-pointer pb-3 flex items-center justify-between">
+            <div 
+                @click="toRout('/app/settings/account')"
+                class="md:mt-3 cursor-pointer mb-1 flex items-center justify-between hover:bg-gray-300 rounded md:p-2">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" class="svg_icon">
                         <g fill="none" fill-rule="evenodd">
@@ -32,7 +39,7 @@ import { ref } from 'vue'
                 <p>O then S</p>
             </div>
             <hr>
-            <div class="md:mt-3 cursor-pointer pb-3 flex items-center justify-between">
+            <div class="md:mt-3 cursor-pointer pb-3 flex items-center justify-between  hover:bg-gray-300 rounded md:p-2">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
                         <g fill="currentColor" fill-rule="evenodd">
@@ -48,7 +55,7 @@ import { ref } from 'vue'
                 </div>
                 <p>O then T</p>
             </div>
-            <div class="pb-3 flex cursor-pointer items-center justify-between">
+            <div class=" flex cursor-pointer items-center justify-between  hover:bg-gray-300 rounded md:p-2">
                 <div class="flex items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
@@ -60,7 +67,7 @@ import { ref } from 'vue'
                 </div>
                 <p>G then A</p>
             </div>
-            <div class="pb-3 flex items-center justify-between">
+            <div class="hover:bg-gray-300 rounded md:p-2 flex items-center justify-between">
                 <div class="flex items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
@@ -72,7 +79,7 @@ import { ref } from 'vue'
                 </div>
                 <p>Ctrl P</p>
             </div>
-            <div class="pb-3 flex cursor-pointer items-center justify-between">
+            <div class="mb-1 hover:bg-gray-300 rounded md:p-2 flex cursor-pointer items-center justify-between">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         aria-hidden="true">
@@ -92,7 +99,7 @@ import { ref } from 'vue'
                 </div>
             </div>
             <hr>
-            <div class="md:mt-3 pb-3 cursor-pointer flex items-center justify-between">
+            <div class="md:mt-1  hover:bg-gray-300 rounded md:p-2 cursor-pointer flex items-center justify-between">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
                         <g fill="none" fill-rule="evenodd">
@@ -104,7 +111,7 @@ import { ref } from 'vue'
                     <p class="ml-1">Upgrade to Pro</p>
                 </div>
             </div>
-            <div class="pb-3 flex cursor-pointer items-center justify-between">
+            <div class="mb-1 flex  hover:bg-gray-300 rounded md:p-2 cursor-pointer items-center justify-between">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         class="business_icon" aria-hidden="true">
@@ -115,7 +122,7 @@ import { ref } from 'vue'
                     <p class="ml-1">Upgrade to Business</p>
                 </div>
             </div>
-            <div class="pb-3 flex cursor-pointer items-center justify-between">
+            <div class="mb-1  hover:bg-gray-300 rounded md:p-2 flex cursor-pointer items-center justify-between">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         aria-hidden="true">
@@ -127,7 +134,7 @@ import { ref } from 'vue'
                 </div>
             </div>
             <hr>
-            <div class="md:mt-2 pb-3 cursor-pointer flex items-center justify-between">
+            <div class="md:mt-2  hover:bg-gray-300 rounded md:p-2 mb-1 cursor-pointer flex items-center justify-between">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
                         <g fill="none" fill-rule="evenodd">

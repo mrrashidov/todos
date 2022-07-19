@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const closeAccSetting = (root)=>{
+    router.push(`${root}`)
+}
 const file = ref(null);
 function onChange(e) {
     file.value = URL.createObjectURL(e.target.files[0]);
@@ -10,7 +15,9 @@ function onChange(e) {
     <div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
         <div class="flex md:pl-10 pb-3 justify-between md:pt-5 md:pr-7">
             <p class="font-bold text-2xl">Account</p>
-            <svg viewBox="0 0 24 24" class="icon_close hover:bg-gray-300 rounded" width="24" height="24">
+            <svg
+                @click="closeAccSetting('/app/project')" 
+                viewBox="0 0 24 24" class="icon_close hover:bg-gray-300 rounded" width="24" height="24">
                 <path fill="currentColor" fill-rule="nonzero"
                     d="M5.146 5.146a.5.5 0 0 1 .708 0L12 11.293l6.146-6.147a.5.5 0 0 1 .638-.057l.07.057a.5.5 0 0 1 0 .708L12.707 12l6.147 6.146a.5.5 0 0 1 .057.638l-.057.07a.5.5 0 0 1-.708 0L12 12.707l-6.146 6.147a.5.5 0 0 1-.638.057l-.07-.057a.5.5 0 0 1 0-.708L11.293 12 5.146 5.854a.5.5 0 0 1-.057-.638z">
                 </path>
