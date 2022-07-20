@@ -75,7 +75,3 @@ import DateSlot from "../components/DateSlots.vue"
 </div>
   
 </template>
-
-<style>
-
-</style>

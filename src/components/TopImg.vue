@@ -1,3 +1,6 @@
+<script setup></script>
+
+
 <template>
   <div class="sm:w-3/4 sm:m-auto lg:w-4/5 lg:m-auto">
       <img class="md:w-4/5 md:m-auto md:hidden | sm:mb-10 sm:w-full" src="../assets/celebrity.webp">
@@ -8,8 +11,3 @@
       <img class="md:w-6/5 md:m-auto md:block | sm:hidden sm:w-full" src="../assets/celebrity.webp">
   </div>
 </template>
-
-<script></script>
-
-<style>
-</style>
