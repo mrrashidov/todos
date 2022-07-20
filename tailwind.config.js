@@ -16,6 +16,7 @@ module.exports = {
         offwhite: "#f2f2f2",
         redish: "#E44232",
         creamColor: "#FFF9F3",
+        lightRed: "#FBE3E0"
       },
     },
   },

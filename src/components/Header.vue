@@ -8,6 +8,9 @@ const router = useRouter();
 const goLogin = () => {
   router.push("/auth/login");
 };
+const goSignUp = () => {
+  router.push("/auth/signup");
+};
 </script>
 
 <template>
@@ -46,12 +49,12 @@ const goLogin = () => {
         </div>
         <div class="w-1/5 flex">
           <button
-            @click="goLogin()"
+            @click="goLogin"
             class="mx-1 cursor-pointer py-2 px-4 rounded-lg opacity-80 hover:bg-offwhite"
           >
             Log in
           </button>
-          <home-button></home-button>
+          <home-button @click="goSignUp"></home-button>
         </div>
       </div>
       <div class="w-full flex flex-col items-center justify-center my-40">
