@@ -5,7 +5,7 @@
     <div class="pt-6">
       <ul>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md cursor-pointer">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -28,7 +28,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md cursor-pointer">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -61,7 +61,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md cursor-pointer">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -85,7 +85,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md cursor-pointer">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -125,7 +125,7 @@
         <span>Projects</span>
       </div>
       <div
-        class="hover:bg-[#EEEEEE] p-2 rounded-md text-zinc-50 group-hover:text-zinc-500"
+        class="hover:bg-zinc-200 p-2 rounded-md text-zinc-50 group-hover:text-zinc-500"
       >
         <svg width="13" height="13" class="group-hover:text-black">
           <path
