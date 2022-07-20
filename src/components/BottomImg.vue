@@ -19,7 +19,7 @@ import HomeButton from '../components/UI/HomeButton.vue'
   </div>
 </template>
 
-<style>
+<style scoped>
 .back{
     background-image: url('/_next/static/images/illus-keep-together_775034b….webp');
 }
