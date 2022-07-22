@@ -1,5 +1,5 @@
 <template>
-<div v-show="store.overlay" @click="store.overlay = false"
+<div v-show="store.overlay" @click.stop="store.overlay = false"
       class="w-screen h-screen bg-black flex z-20 my-0 mx-auto opacity-90 items-center justify-center fixed top-0 left-0">
     <div >
       <button @click="niam">sdhd</button>

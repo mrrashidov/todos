@@ -5,7 +5,7 @@ import App from './App.vue'
 import './assets/main.css'
 import { client } from './utils/graphql'
 import { i18n } from './utils/i18n'
-import components from "./components/UI/"
+import components from "./components/UI
 
 const app = createApp(App)
 const pinia = createPinia()

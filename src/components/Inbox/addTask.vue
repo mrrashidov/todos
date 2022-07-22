@@ -1,6 +1,7 @@
 <template>
  <div>
     har doimgide iwlamadi 
+
     
      <InputField type="text" class="bg-red-400"></InputField>
  </div>
