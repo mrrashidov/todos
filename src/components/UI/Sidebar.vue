@@ -1,9 +1,11 @@
 <template>
-  <div class="bg-zinc-50 w-[20vw] h-[90vh] pl-[3vw]">
+  <div
+    class="bg-zinc-50 sm:hidden sm:w-[50%] md:hidden md:w-[40%] lg:block lg:w-1/5 xl:block xl:w-1/5 2xl:block 2xl:w-1/5 hidden h-[90vh] pl-[3vw] group"
+  >
     <div class="pt-6">
       <ul>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -26,7 +28,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -59,7 +61,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -83,7 +85,7 @@
           </div>
         </li>
         <li>
-          <div class="flex p-1 hover:bg-[#EEEEEE] rounded-md">
+          <div class="flex p-1 hover:bg-zinc-200 rounded-md cursor-pointer">
             <div>
               <svg
                 width="24"
@@ -111,6 +113,28 @@
           </div>
         </li>
       </ul>
+    </div>
+    <div class="flex justify-between items-center p-1 cursor-pointer">
+      <div class="flex">
+        <svg width="16" height="16" viewBox="0 0 16 16" class="aqv2kvH m-1">
+          <path
+            d="M14 5.758L13.156 5 7.992 9.506l-.55-.48.002.002-4.588-4.003L2 5.77 7.992 11 14 5.758"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <span>Projects</span>
+      </div>
+      <div
+        class="hover:bg-zinc-200 p-2 rounded-md text-zinc-50 group-hover:text-zinc-500"
+      >
+        <svg width="13" height="13" class="group-hover:text-black">
+          <path
+            d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
     </div>
   </div>
 </template>

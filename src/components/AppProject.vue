@@ -126,16 +126,37 @@
     </div>
   </div>
   <Sidebar />
+  <div v-show="checked">
+    <div
+      class="w-full h-full fixed top-0 left-0 flex justify-center items-center bg-[#7F7F7F] opacity-30"
+    ></div>
+    <div>
+      <AddProject
+        class="rounded-xl w-full h-full flex justify-center items-center"
+      />
+    </div>
+  </div>
+  <div></div>
   <account-section v-if="showAcc"></account-section>
 </template>
 
-<script setup >
-import {ref} from 'vue'
+<script setup>
+import { ref } from "vue";
 import Sidebar from "./UI/Sidebar.vue";
-import AccountSection from './AccountSection.vue'
+import AddProject from "./UI/AddProject.vue";
+
+let checked = false;
+
+function enableChecker() {
+  checked = true;
+}
+function disableChecker() {
+  checked = false;
+}
+import AccountSection from "./AccountSection.vue";
 let showAcc = ref(false);
-function nima(){
-  showAcc = !showAcc
-  console.log(showAcc)
- }
+function nima() {
+  showAcc = !showAcc;
+  console.log(showAcc);
+}
 </script>
