@@ -65,7 +65,7 @@ function onChange(e) {
                 <div class="md:mt-5">
                     <p class="md:text-xl md:font-semibold md:mt-3">Email</p>
                     <p class="font-mono">userExample@gmail.com</p>
-                    <setting-acc-btn bgColor="md:w-[18%] md:mt-3 bg-gray-200 hover:bg-gray-300">
+                    <setting-acc-btn bgColor="md:w-1/5 md:mt-3 bg-gray-200 hover:bg-gray-300">
                         <p class="">Change email</p>
                     </setting-acc-btn>
                 </div>
@@ -140,7 +140,7 @@ function onChange(e) {
                 <p class="text-xl font-semibold">Connected accaunts</p>
                 <p class="text-sm md:mt-3">This will immediately delete all of your data including tasks, projects,
                     comments, and more. This can’t be undone. <a href="#" class="text-red-500">Learn more.</a></p>
-                <setting-acc-btn bgColor="md:w-1/5 md:mt-3 border-red-500">
+                <setting-acc-btn bgColor="md:w-1/4 md:mt-3 border-red-500">
                     <p class="text-red-500">Delete account</p>
                 </setting-acc-btn>
             </div>
