@@ -27,7 +27,7 @@
   </section>
 </template>
 
-<script lang="ts">;
+<script >;
 import featOverlay from './featHeaderImgCom.vue';
 import overlayVideo from './overlayVideo.vue';
 export default {

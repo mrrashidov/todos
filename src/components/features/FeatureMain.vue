@@ -1,21 +1,31 @@
 <template>
-    <main>
-        <feat-header-sec></feat-header-sec>
-        <connect-todo-sec></connect-todo-sec>
-        <feat-every-where-sec></feat-every-where-sec>
-    </main>
+  <main>
+    <feat-header-sec></feat-header-sec>
+    <div class="sm:ml-10 sm:mr-10 md:pl-0 md:pr-0">
+      <features-second-sec></features-second-sec>
+      <features-third-sec></features-third-sec>
+      <features-fourth-sec></features-fourth-sec>
+      <features-fifth-sec></features-fifth-sec>
+    </div>
+    <connect-todo-sec></connect-todo-sec>
+    <feat-every-where-sec></feat-every-where-sec>
+  </main>
 </template>
 
-<script lang="ts">  
-import featHeaderSec from '@/components/features/featHeaderSec.vue'
-import connectTodoSec from '@/components/features/connectTodoSec.vue'
-import featEveryWhereSec from '@/components/features/featEveryWhereSec.vue'
+<script >
+
+import featHeaderSec from "./featHeaderSec.vue";
+import connectTodoSec from "./connectTodoSec.vue";
+import featEveryWhereSec from "./featEveryWhereSec.vue";
+import FeaturesSecondSec from "./FeaturesSecondSec.vue";
+import FeaturesThirdSec from "./FeaturesThirdSec.vue";
+import FeaturesFourthSec from "./FeaturesFourthSec.vue";
+import FeaturesFifthSec from "./FeaturesFifthSec.vue";
 export default {
-  components: { featHeaderSec,connectTodoSec,featEveryWhereSec },
-    name : "FeatureMain"
-}
+  components: { featHeaderSec, connectTodoSec, featEveryWhereSec, FeaturesSecondSec ,FeaturesThirdSec,FeaturesFifthSec,FeaturesFourthSec},
+  name: "FeatureMain",
+};
 </script>
 
 <style>
-
 </style>

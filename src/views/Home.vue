@@ -1,11 +1,13 @@
 <template>
-  <Header />
-  <MainContentImg />
-  <MainContent />
-  <Footer />
+  <div>
+    <Header />
+    <MainContentImg />
+    <MainContent />
+    <Footer />
+  </div>
 </template>
 
-<script lang="ts">
+<script >
 import Header from "@/components/Header.vue";
 import Footer from "@/components/footer.vue";
 import MainContent from "@/components/MainContent.vue";

@@ -1,3 +1,9 @@
-import { createPinia } from 'pinia'
+import {defineStore} from 'pinia'
 
-export const pinia = createPinia()
+export const useStore = defineStore('store',{
+  state: ()=>({
+    
+    overlay: true,
+    addbtn : true,
+  })
+}) 

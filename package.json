@@ -18,7 +18,7 @@
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
     "graphql": "^16.5.0",
-    "pinia": "^2.0.14",
+    "pinia": "^2.0.16",
     "vee-validate": "^4.5.11",
     "villus": "^1.2.2",
     "vue": "^3.2.37",

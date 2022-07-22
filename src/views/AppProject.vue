@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppProject from "@/components/AppProject.vue";
+import AppProjectComp from "../components/AppProjectComp.vue";
 </script>
 
 <template>
