@@ -5,13 +5,13 @@
       <Sidebar />
       <inbox-add></inbox-add>
     </div>
-    <input-field class="bg-red-500"></input-field>
+    <add-task></add-task>
   </div>
 </template>
 
 <script setup  lang="ts">
 import { ref } from "vue";
-import InputField from "../components/UI/InputField.vue"
+import addTask from "../components/Inbox/addTask.vue"
 import Sidebar from "./UI/Sidebar.vue";
 import InboxAdd from "../components/Inbox/InboxAdd.vue";
 import InboxSec from "./Inbox/InboxSec.vue";

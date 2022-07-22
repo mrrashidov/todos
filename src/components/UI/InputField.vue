@@ -1,14 +1,19 @@
 
 <script setup>
-import { defineComponent } from '@vue/composition-api'
-const props = defineProps(["value"])
+const props = defineProps(["value"]);
 </script>
 <template>
-    <input v-bind="$attrs" 
+ <div>
+     <input
+     class="border-black"
+    v-bind="$attrs"
     :value="value"
-
-    >
+    @input="(event) => (value = event.target.value)"
+  />
+ </div>
 </template>
+
+
 
 
 
