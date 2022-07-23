@@ -10,7 +10,7 @@ function toRout(root){
 
 <template>
     <div
-        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-[70%] absolute md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
+        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
         <div>
             <div class="flex items-center">
                 <img class="h-14 rounded-full m-1 cursor-pointer"
