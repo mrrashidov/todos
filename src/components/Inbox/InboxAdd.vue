@@ -1,18 +1,12 @@
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      state: true,
-      inputChange: true,
-    };
-  },
-};
+<script setup>
+  import addTask from "./addTask.vue"
 </script>
 
 <template>
     <div 
       class="
+        relative
         sm:w-full
         md:w-full
         lg:w-4/5
@@ -181,7 +175,7 @@ export default {
 
       <div class="w-full">
         <div
-          v-if="state"
+          v-if="true"
           @click="openSection"
           class="
             add-section

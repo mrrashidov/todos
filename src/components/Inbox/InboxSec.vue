@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { useStore } from "../../store";
 const store = useStore();
+function gull(){
+  store.$state.addbtn=true
+  console.log(store.$state.addbtn);
+  
+}
 </script>
 <template>
   <div>
@@ -66,10 +71,11 @@ const store = useStore();
       </div>
       <div class="flex items-center">
         <div
-          @click="store.addbtn = true"
           class="hover:bg-appHeaderHover rounded-md p-1 mx-0.5 cursor-pointer"
         >
-          <svg class="text-white" width="24" height="24" viewBox="0 0 24 24">
+          <svg 
+          @click="gull"
+          class="text-white" width="24" height="24" viewBox="0 0 24 24">
             <g fill="none" fill-rule="evenodd" transform="translate(4 3)">
               <mask id="jd4FBg" fill="#fff">
                 <path

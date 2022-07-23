@@ -3,7 +3,10 @@ import {defineStore} from 'pinia'
 export const useStore = defineStore('store',{
   state: ()=>({
     
-    overlay: true,
-    addbtn : true,
+    overlay: false,
+    addbtn : false,
+    firstTitle:false,
+    secondTitle : false,
+    thirdTitle : false
   })
 }) 
