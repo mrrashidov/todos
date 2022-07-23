@@ -19,28 +19,29 @@ import SettingNotification from '@/views/SettingNotification.vue'
 import {useStore} from '../../store'
 
 const store = useStore();
-function changeSetting(val1, val2){
+function changeSetting(val1, val2, val3){
     store.account = val1
     store.subs = val2
+    store.notif = val3
 }
  </script>
 
 <template>
     <div class="md:w-[80%] md:ml-auto md:mt-16 flex">
         <setting-bar>
-            <account @click="changeSetting(true, false)"/>
+            <account @click="changeSetting(true, false, false)"/>
             <general/>
             <Advanced/>
-            <subscription @click="changeSetting(false, true)"/>
+            <subscription @click="changeSetting(false, true, false)"/>
             <theme/>
             <productivity/>
             <reminders/>
-            <notification/>
+            <notification @click="changeSetting(false, false, true)"/>
             <backups/>
             <intagrations/>
         </setting-bar>
         <setting-account v-show="store.account"></setting-account>
         <setting-subscription v-show="store.subs"></setting-subscription>
-<!--        <setting-notification v-show="true"></setting-notification>-->
+        <setting-notification v-show="store.notif"></setting-notification>
     </div>
 </template>
