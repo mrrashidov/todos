@@ -1,14 +1,14 @@
+<template>
+  <Header />
+  <MainContentImg />
+  <MainContent />
+  <Footer />
+</template>
+
 <script setup>
-import TopImg from '../components/TopImg.vue'
-import FooterText from '@/components/FooterText.vue'
-import BottomImg from '../components/BottomImg.vue'
+import Header from "@/components/Header.vue";
+import Footer from "@/components/footer.vue";
+import MainContent from "@/components/MainContent.vue";
+import MainContentImg from "@/components/MainContentImg.vue";
 </script>
 
-
-<template>
-  <div>
-    <top-img></top-img>
-    <footer-text></footer-text>
-    <bottom-img></bottom-img>
-  </div>
-</template>
