@@ -126,13 +126,13 @@
 <style>
 .flora-enter-active,
 .flora-leave-active{
-  transition: all 2s ease;
+  transition: all .3s ease;
 }
 .flora-enter-active {
-  animation: flora-in 1s;
+  animation: flora-in 0.3s reverse;
 }
 .flora-leave-active {
-  animation: flora-in 1s reverse;
+  animation: flora-in 0.3s ;
 }
 @keyframes flora-in {
   0% {
