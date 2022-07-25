@@ -7,6 +7,7 @@ export const useStore = defineStore('store',{
     addbtn : false,
     firstTitle:false,
     secondTitle : false,
-    thirdTitle : false
+    thirdTitle : false,
+    asideMenu : true
   })
 }) 

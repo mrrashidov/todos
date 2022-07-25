@@ -1,17 +1,17 @@
-<script setup lang="ts">
+<script setup>
 import { useStore } from "../../store";
 const store = useStore();
 function gull(){
   store.$state.addbtn=true
-  console.log(store.$state.addbtn);
-  
 }
+console.log(store.$state.asideMenu);
 </script>
 <template>
   <div>
     <div class="bg-redish flex px-[3vw] py-1 justify-between">
       <div class="flex items-center">
         <div
+          @click="store.$state.asideMenu = !store.$state.asideMenu"
           class="hover:bg-appHeaderHover rounded-md p-1 mx-0.5 cursor-pointer"
         >
           <svg

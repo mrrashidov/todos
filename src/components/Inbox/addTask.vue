@@ -196,6 +196,7 @@ function Close(e) {
         <div class="flex justify-end w-full">
           <div class="flex">
             <button-field
+              @click="store.$state.addbtn=false"
               :disabled="false"
               class="bg-gray-300 text-gray-700 mr-2"
             >
