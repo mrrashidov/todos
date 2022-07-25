@@ -7,10 +7,14 @@
         navigator.clipboard.writeText(urlICal.value);
         alert("Copied the text: ");
     }
+    import {useStore} from '../store'
+    const store = useStore();
 </script>
 
 <template>
-    <div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
+    <div
+        v-show="store.intag" 
+        class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
         <section-title>
             Integration
         </section-title>

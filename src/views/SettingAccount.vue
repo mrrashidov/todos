@@ -2,6 +2,9 @@
 import { ref } from 'vue'
 import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
 import  SectionTitle from '@/components/UI/SectionTitle.vue'
+import {useStore} from '../store'
+const store = useStore();
+
 import { useRouter } from 'vue-router'
 const router = useRouter()
 const closeAccSetting = (root)=>{
@@ -13,7 +16,9 @@ function onChange(e) {
 }
 </script>
 <template>
-    <div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
+    <div
+        v-show="store.account"
+        class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
         <section-title>
             Account
         </section-title>

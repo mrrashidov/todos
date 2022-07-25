@@ -1,12 +1,16 @@
 <script setup>
-    import  {ref} from 'vue'
+import  {ref} from 'vue'
 import  NotifItem from  '../components/loginNotification/NotifItem.vue';
 const arr = ['Comments for you', 'Tasks assigned to you', 'Tasks completed', 'Tasks uncompleted', 'Collaborators joining project', 'Collaborators declining projects', 'Collaborators leaving project', 'Collaborators being removed from projects']
 import NotifBottom from '@/components/loginNotification/NotifBottom.vue';
+import {useStore} from '../store'
+const store = useStore();
 </script>
 
 <template>
-    <div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
+    <div 
+        v-show="store.notif"
+        class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
         <div class="flex md:pl-5 pb-3 justify-between md:pt-5 md:pr-7">
             <p class="font-bold text-2xl">Notifications</p>
             <svg @click="closeAccSetting('/app/project')" viewBox="0 0 24 24"

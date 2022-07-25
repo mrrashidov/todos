@@ -1,10 +1,14 @@
 <script setup>
-    import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
-    import  SectionTitle from '@/components/UI/SectionTitle.vue'
+import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
+import  SectionTitle from '@/components/UI/SectionTitle.vue'
+import {useStore} from '../store'
+const store = useStore();
 </script>
 
 <template>
-<div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
+<div
+    v-show="store.backups"
+    class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
     <section-title>
         Backups
     </section-title>

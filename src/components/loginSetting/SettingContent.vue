@@ -19,13 +19,13 @@ import  SettingIntagration from '@/views/SettingIntagration.vue'
 
 
 import {useStore} from '../../store'
-
+const store = useStore();
 function changeSetting(val1, val2, val3, val4, val5){
-    useStore().account = val1;
-    useStore().subs = val2;
-    useStore().notif = val3;
-    useStore().backups = val4
-    useStore().intag = val5
+    store.account = val1;
+    store.subs = val2;
+    store.notif = val3;
+    store.backups = val4
+    store.intag = val5
 }
  </script>
 
@@ -43,10 +43,10 @@ function changeSetting(val1, val2, val3, val4, val5){
             <backups @click="changeSetting(false, false, false, true, false)"/>
             <intagrations @click="changeSetting(false, false, false, false, true)"/>
         </setting-bar>
-        <setting-account v-show="useStore().account"/>
-        <setting-subscription v-show="useStore().subs"/>
-        <setting-notification v-show="useStore().notif"/>
-        <setting-backups v-show="useStore().backups"/>
-        <setting-intagration v-show="useStore().intag"/>
+        <setting-account/>
+        <setting-subscription/>
+        <setting-notification/>
+        <setting-backups/>
+        <setting-intagration/>
     </div>
 </template>
