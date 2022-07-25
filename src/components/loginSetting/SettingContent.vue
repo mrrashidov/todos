@@ -14,34 +14,39 @@ import Intagrations from '@/components/loginSetting//BarBtns/Intagrations.vue'
 import SettingAccount from '@/views/SettingAccount.vue'
 import SettingSubscription from '@/views/SettingSubscription.vue'
 import SettingNotification from '@/views/SettingNotification.vue'
+import  SettingBackups from '@/views/SettingBackups.vue'
+import  SettingIntagration from '@/views/SettingIntagration.vue'
 
 
 import {useStore} from '../../store'
 
-const store = useStore();
-function changeSetting(val1, val2, val3){
-    store.account = val1
-    store.subs = val2
-    store.notif = val3
+function changeSetting(val1, val2, val3, val4, val5){
+    useStore().account = val1;
+    useStore().subs = val2;
+    useStore().notif = val3;
+    useStore().backups = val4
+    useStore().intag = val5
 }
  </script>
 
 <template>
     <div class="md:w-[80%] md:ml-auto md:mt-16 flex">
         <setting-bar>
-            <account @click="changeSetting(true, false, false)"/>
+            <account @click="changeSetting(true, false, false, false, false)"/>
             <general/>
             <Advanced/>
-            <subscription @click="changeSetting(false, true, false)"/>
+            <subscription @click="changeSetting(false, true, false, false, false)"/>
             <theme/>
             <productivity/>
             <reminders/>
-            <notification @click="changeSetting(false, false, true)"/>
-            <backups/>
-            <intagrations/>
+            <notification @click="changeSetting(false, false, true, false, false)"/>
+            <backups @click="changeSetting(false, false, false, true, false)"/>
+            <intagrations @click="changeSetting(false, false, false, false, true)"/>
         </setting-bar>
-        <setting-account v-show="store.account"></setting-account>
-        <setting-subscription v-show="store.subs"></setting-subscription>
-        <setting-notification v-show="store.notif"></setting-notification>
+        <setting-account v-show="useStore().account"/>
+        <setting-subscription v-show="useStore().subs"/>
+        <setting-notification v-show="useStore().notif"/>
+        <setting-backups v-show="useStore().backups"/>
+        <setting-intagration v-show="useStore().intag"/>
     </div>
 </template>

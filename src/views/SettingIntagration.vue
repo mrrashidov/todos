@@ -1,6 +1,12 @@
 <script setup>
+    import {ref} from 'vue'
     import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
     import  SectionTitle from '@/components/UI/SectionTitle.vue'
+    let urlICal = ref('https://ext.todoist.com/export/ical/todoist?user_id=40260399&ical_token=df23a9f5eb4a68d049e2b70700eda325193f0014fbeb7a15cae8f725092afcb2&r_factor=4247');
+    const copyClipboard = () => {
+        navigator.clipboard.writeText(urlICal.value);
+        alert("Copied the text: ");
+    }
 </script>
 
 <template>
@@ -53,7 +59,7 @@
             </div>
             <div class="flex items-center justify-between md:pr-5">
                 <p class="font-bold">Calendar Subscription URL (iCal)</p>
-                <setting-acc-btn bgColor=" md:w-auto md:ml-3 flex items-center hover:bg-gray-200">
+                <setting-acc-btn v-on:click.stop="copyClipboard" bgColor=" md:w-auto md:ml-3 flex items-center hover:bg-gray-200">
                     <p class="text-sm">Copy to clipboard</p>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.26756 5H18C18.5523 5 19 5.44772 19 6V16.7324C19.5978 16.3866 20 15.7403 20 15V6C20 4.89543 19.1046 4 18 4H9C8.25972 4 7.61337 4.4022 7.26756 5ZM15 7H6C4.89543 7 4 7.89543 4 9V18C4 19.1046 4.89543 20 6 20H15C16.1046 20 17 19.1046 17 18V9C17 7.89543 16.1046 7 15 7ZM5 9C5 8.44772 5.44772 8 6 8H15C15.5523 8 16 8.44772 16 9V18C16 18.5523 15.5523 19 15 19H6C5.44772 19 5 18.5523 5 18V9ZM8 13H7V14H8V13ZM10 13H11V14H10V13ZM14 13H13V14H14V13Z" fill="currentColor"></path></svg>
                 </setting-acc-btn>
@@ -61,8 +67,9 @@
             <div class="md:pr-5 md:mt-4 md:pb-4">
                 <input
                         type="text"
-                        value="https://ext.todoist.com/export/ical/todoist?user_id=40260399&ical_token=df23a9f5eb4a68d049e2b70700eda325193f0014fbeb7a15cae8f725092afcb2&r_factor=4247"
                         class="border md:w-full rounded text-sm p-1"
+                        v-model="urlICal"
+                        id="urlInput"
                 >
             </div>
             <hr>
