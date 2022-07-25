@@ -1,10 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
+import {useStore} from '../store'
+const store = useStore();
 </script>
 
 <template>
-    <div class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
+    <div
+        v-show="store.subs"
+        class="md:w-[65%] bg-white rounded-tr-lg md:h-[80vh] rounded-br-lg ">
         <div class="flex md:pl-10 pb-3 justify-between md:pt-5 md:pr-7">
             <p class="font-bold text-2xl">Subscription</p>
             <svg @click="closeAccSetting('/app/project')" viewBox="0 0 24 24"

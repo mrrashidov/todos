@@ -121,9 +121,8 @@
     </div>
       </transition>
     </div>
-   
 </template>
-<style>
+<style scoped>
 .flora-enter-active,
 .flora-leave-active{
   transition: all .3s ease;

@@ -6,7 +6,7 @@ const props = defineProps(['bgColor'])
 
 <template>
     <div>
-        <div :class="bgColor" @click="$emit('click', $event)" class="cursor-pointer border-2 text-center rounded md:pr-3 md:pl-3 md:pt-1 md:pb-1">
+        <div :class="bgColor" @click="$emit('click', $event)" class="cursor-pointer border text-center rounded md:pr-3 md:pl-3 md:pt-1 md:pb-1">
            <slot></slot>
         </div>
     </div>

@@ -1,15 +1,9 @@
 <template>
-  <div class="">
-    <Login />
+  <div>
+    <Login/>
   </div>
 </template>
 
-<script lang="ts">
+<script setup>
 import Login from "@/components/Login/LoginComp.vue";
-
-export default {
-  components: {
-    Login,
-  },
-};
 </script>

@@ -25,6 +25,6 @@ export const root = [
   {
     path: "/app/settings/subscription",
     component: () => import("@/views/SettingSubscription.vue")
-  },
-  
+  }
 ];
+

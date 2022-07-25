@@ -1,13 +1,18 @@
-import {defineStore} from 'pinia'
+import { defineStore } from 'pinia'
 
-export const useStore = defineStore('store',{
-  state: ()=>({
-    
+export const useStore = defineStore('store', {
+  state: () => ({
     overlay: false,
-    addbtn : false,
-    firstTitle:false,
-    secondTitle : false,
-    thirdTitle : false,
-    asideMenu : true
+    addbtn: false,
+    firstTitle: false,
+    secondTitle: false,
+    thirdTitle: false,
+    asideMenu: true,
+    account: true,
+    subs: false,
+    notif: false,
+    backups: false,
+    intag: false
   })
-}) 
+})
+
