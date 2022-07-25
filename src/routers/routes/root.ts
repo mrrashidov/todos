@@ -1,3 +1,5 @@
+import path from "path";
+
 export const root = [
   { path: "/", component: () => import("@/views/Home.vue") },
   { path: "/auth/login", component: () => import("@/views/Login.vue") },
@@ -5,7 +7,7 @@ export const root = [
   { path: "/features", component: () => import("@/views/Features.vue") },
   {
     path: "/app/project",
-    component: () => import("@/components/AppProject.vue"),
+    component: () => import("@/components/AppProjectComp.vue"),
   },
   
   {
@@ -25,3 +27,4 @@ export const root = [
     component: () => import("@/views/SettingSubscription.vue")
   }
 ];
+

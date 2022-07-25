@@ -1,8 +1,8 @@
 <template>
-<div v-show="false" @click="isClicked= !isClicked"
-      class="w-screen h-screen bg-black z-20 flex my-0 mx-auto opacity-90 items-center justify-center fixed top-0 left-0">
+<div v-show="store.overlay" @click="store.overlay = false"
+      class="w-screen h-screen bg-black flex z-20 my-0 mx-auto opacity-90 items-center justify-center fixed top-0 left-0">
     <div >
-      
+      <button @click="niam">sdhd</button>
     <iframe
       class=" opacity-100"      
       width="1143"
@@ -18,18 +18,11 @@
   
 </template>
 
-<script lang="ts">
-export default {
-    name:"overlayVideo",
-    // data() {
-    //   return {
-    //     isClicked : this.$store.state.overlay 
-    //   }
-    // },
-    // mounted(){
-    //   console.log(this.isClicked)
-    // }
-};
+<script setup>
+
+  import {useStore} from '../../store'
+  const store = useStore()
+  
 </script>
 
 <style>
