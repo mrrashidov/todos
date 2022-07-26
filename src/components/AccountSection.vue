@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import {useAttrs} from 'vue'
+import { useStore } from "../store";
+const store = useStore();
+const attrs = useAttrs()
 const router = useRouter()
 const route = useRoute()
 function toRout(root){
@@ -10,7 +14,8 @@ function toRout(root){
 
 <template>
     <div
-        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
+        v-show="store.accShow"
+        class="md:w-[30%] md:pl-4 z-50 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:-top-10  md:right-5 bg-gray-50 border-slate-400 border rounded-xl">
         <div>
             <div class="flex items-center">
                 <img class="h-14 rounded-full m-1 cursor-pointer"
@@ -22,7 +27,7 @@ function toRout(root){
             </div>
             <div 
                 @click="toRout('/app/settings/account')"
-                class="md:mt-3 cursor-pointer mb-1 flex items-center justify-between hover:bg-gray-300 rounded md:p-2">
+                class="md:mt-3 cursor-pointer mb-1 flex items-center hover:bg-gray-300 justify-between rounded md:p-2">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" class="svg_icon">
                         <g fill="none" fill-rule="evenodd">

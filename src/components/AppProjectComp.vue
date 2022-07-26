@@ -4,7 +4,6 @@ import addTask from "../components/Inbox/addTask.vue";
 import Sidebar from "./UI/Sidebar.vue";
 import InboxAdd from "../components/Inbox/InboxAdd.vue";
 import InboxSec from "./Inbox/InboxSec.vue";
-
 const store = useStore();
 </script>
 <template>
