@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue";
 import InputField from "../UI/InputField.vue";
 import svgTitle from "./svgTitle.vue";
 import buttonField from "../UI/buttonField.vue";
+import taskCalendar from "./taskCalendar.vue"
 import { useStore } from "../../store";
 import { useAttrs } from "vue";
 const props = defineProps(["showAddTask"]);
@@ -12,10 +13,10 @@ function Close(e) {
   store.$state.addbtn = false;
   console.log(store.$state.addbtn, "from add task");
 }
-const input=ref("")
 function showCalendar(){
-  input.value.showPicker()
+  store.$state.showdatapicker=!store.$state.showdatapicker
 }
+
 </script>
 <template>
   <div v-bind="attrs" class="w-full h-full" @click.self="Close">
@@ -76,7 +77,7 @@ function showCalendar(){
               <span>Today</span>
 
             </label>
-            <input ref="input" class="-translate-x-28 translate-y-28 w-0"  type="date" name="dateInput" id="dateInput">
+            <input ref="input" class="-translate-x-20 translate-y-96 ml-20 mt-48 absolute w-0"  type="date" name="dateInput" id="dateInput">
             <div
               class="
                 px-1
@@ -215,6 +216,7 @@ function showCalendar(){
             </button-field>
           </div>
         </div>
+        <task-calendar></task-calendar>
       </div>
     </transition>
   </div>

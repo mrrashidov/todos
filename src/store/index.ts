@@ -12,7 +12,8 @@ export const useStore = defineStore('store', {
     subs: false,
     notif: false,
     backups: false,
-    intag: false
+    intag: false,
+    showdatapicker : false
   })
 })
 
