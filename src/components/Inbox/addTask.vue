@@ -10,7 +10,6 @@ const attrs = useAttrs();
 const store = useStore();
 function Close(e) {
   store.$state.addbtn = false;
-  console.log(store.$state.addbtn, "from add task");
 }
 </script>
 <template>
@@ -26,7 +25,7 @@ function Close(e) {
           mt-14
           mx-auto
           shadow-2xl
-          z-50
+          z-10
         "
       >
         <input-field
