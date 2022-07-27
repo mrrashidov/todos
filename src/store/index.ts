@@ -13,7 +13,9 @@ export const useStore = defineStore('store', {
     notif: false,
     backups: false,
     intag: false,
-    accShow: false
+    accShow: false,
+    viewComp: false
+
   })
 })
 
