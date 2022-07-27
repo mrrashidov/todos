@@ -15,7 +15,7 @@ function toRout(root){
 <template>
     <div
         v-show="store.accShow"
-        class="md:w-[30%] md:pl-4 z-50 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:-top-10  md:right-5 bg-gray-50 border-slate-400 border rounded-xl">
+        class="md:w-[22%] md:pl-4 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:top-2 z-30  md:right-5 bg-gray-50 border-slate-400 border rounded-xl">
         <div>
             <div class="flex items-center">
                 <img class="h-14 rounded-full m-1 cursor-pointer"

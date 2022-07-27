@@ -325,7 +325,6 @@ import AccountSection from '@/components/AccountSection.vue'
         <p class="mx-1 underline">How to best use the inbox</p>
       </a>
     </div>
-    <account-section></account-section>
   </div>
 </template>
 
