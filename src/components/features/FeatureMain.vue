@@ -9,6 +9,9 @@
     </div>
     <connect-todo-sec></connect-todo-sec>
     <feat-every-where-sec></feat-every-where-sec>
+    <top-img></top-img>
+    <footer-text></footer-text>
+    <bottom-img></bottom-img>
   </main>
 </template>
 
@@ -21,8 +24,11 @@ import FeaturesSecondSec from "./FeaturesSecondSec.vue";
 import FeaturesThirdSec from "./FeaturesThirdSec.vue";
 import FeaturesFourthSec from "./FeaturesFourthSec.vue";
 import FeaturesFifthSec from "./FeaturesFifthSec.vue";
+import TopImg from "./TopImg.vue"
+import FooterText from "./FooterText.vue"
+import BottomImg from "./BottomImg.vue"
 export default {
-  components: { featHeaderSec, connectTodoSec, featEveryWhereSec, FeaturesSecondSec ,FeaturesThirdSec,FeaturesFifthSec,FeaturesFourthSec},
+  components: { featHeaderSec, connectTodoSec, featEveryWhereSec, FeaturesSecondSec ,FeaturesThirdSec,FeaturesFifthSec,FeaturesFourthSec,TopImg, FooterText, BottomImg},
   name: "FeatureMain",
 };
 </script>
