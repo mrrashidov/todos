@@ -4,7 +4,7 @@ import addTask from "../components/Inbox/addTask.vue";
 import Sidebar from "./UI/Sidebar.vue";
 import InboxAdd from "../components/Inbox/InboxAdd.vue";
 import InboxSec from "./Inbox/InboxSec.vue";
-
+import AccountSection from "../components/AccountSection.vue"
 const store = useStore();
 </script>
 <template>
@@ -14,7 +14,7 @@ const store = useStore();
       <Sidebar />
       <inbox-add></inbox-add>
       <add-task
-        :showAddTask="store.$state.addBtn"
+         :showAddTask="store.$state.addBtn"
         class="absolute z-40 top-0"
       ></add-task>
     </div>

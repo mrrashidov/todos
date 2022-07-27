@@ -12,6 +12,10 @@ function Close(e) {
   store.$state.addbtn = false;
   console.log(store.$state.addbtn, "from add task");
 }
+const input=ref("")
+function showCalendar(){
+  input.value.showPicker()
+}
 </script>
 <template>
   <div v-bind="attrs" class="w-full h-full" @click.self="Close">
@@ -26,7 +30,8 @@ function Close(e) {
           mt-14
           mx-auto
           shadow-2xl
-          z-50
+          z-100
+          bg-white
         "
       >
         <input-field
@@ -41,7 +46,8 @@ function Close(e) {
         ></input-field>
         <div class="flex justify-between w-full my-5">
           <div class="flex">
-            <div
+            <label
+              @click="showCalendar"
               class="
                 px-1
                 py-0
@@ -67,8 +73,10 @@ function Close(e) {
                   d="M12 2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8zm0 1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1.25 7a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm.75-5a.5.5 0 1 1 0 1h-7a.5.5 0 0 1 0-1h7z"
                 ></path>
               </svg>
-              <span class="">Today</span>
-            </div>
+              <span>Today</span>
+
+            </label>
+            <input ref="input" class="-translate-x-28 translate-y-28 w-0"  type="date" name="dateInput" id="dateInput">
             <div
               class="
                 px-1
@@ -217,6 +225,9 @@ function Close(e) {
 }
 .bounce-leave-active {
   animation: bounce-in 0.5s reverse;
+}
+.z-100{
+  z-index: 100;
 }
 @keyframes bounce-in {
   0% {
