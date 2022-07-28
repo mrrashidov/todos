@@ -13,7 +13,9 @@ export const useStore = defineStore('store', {
     notif: false,
     backups: false,
     intag: false,
-    showdatapicker : false
+    showdatapicker: false,
+    commentClick: true,
+    activityClick: false
   })
 })
 
