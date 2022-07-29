@@ -19,7 +19,10 @@ export const useStore = defineStore('store', {
     advanced: false,
     theme: false,
     productivity: false,
-    remin: false
+    remin: false,
+    todayMain: true,
+    day: new Date().getDate(),
   })
+
 })
 

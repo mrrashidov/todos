@@ -6,6 +6,7 @@ import InboxAdd from "../components/Inbox/InboxAdd.vue";
 import InboxSec from "./Inbox/InboxSec.vue";
 import TodayPage from '@/components/AppToday/TodayPage.vue'
 import AccountSection from '@/components/AccountSection.vue'
+import UpcomingMain from '@/components/AppUpcoming/UpcomingMain.vue'
 const store = useStore();
 </script>
 <template>
@@ -14,8 +15,10 @@ const store = useStore();
     <div class="w-full flex flex-nowrap items-center relative">
       <Sidebar/>
       <inbox-add v-show="false"></inbox-add>
-      <account-section></account-section>
-      <today-page></today-page>
+      <account-section/>
+<!--      <today-page/>-->
+      <upcoming-main/>
+
       <add-task
         :showAddTask="store.$state.addBtn"
         class="absolute z-10 top-0"
