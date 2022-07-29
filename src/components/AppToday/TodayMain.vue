@@ -3,7 +3,6 @@ import TodaySvg from '@/components/AppToday/TodaySvg.vue'
 </script>
 
 <template>
-    <div>
         <div class="flex md:mt-5 items-center add-task cursor-pointer">
             <svg class="text-red-500 svg" width="13" height="13">
                 <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"
@@ -49,7 +48,6 @@ import TodaySvg from '@/components/AppToday/TodaySvg.vue'
                 How to plan your day
             </a>
         </div>
-    </div>
 </template>
 
 <style scoped>

@@ -10,81 +10,56 @@
     const month = new Date().getMonth() + 1;
     let juftMonth = ['February', 'April', 'June', 'September', 'November'];
     let toqMonth = ['January', 'March', 'May', 'July', 'August', 'October', 'December'];
-    let haft = '';
-    let oy = '';
-    switch (week) {
-        case 1:
-            haft = 'Mon';
-            break;
-        case 2:
-            haft = 'Tue';
-            break;
-        case 3:
-            haft = 'Wen';
-            break;
-        case 4:
-            haft = 'Thu';
-            break;
-        case 5:
-            haft = 'Fri';
-            break;
-        case 6:
-            haft = 'Sat';
-            break;
-        case 7:
-            haft = 'Sun';
-            break;
-    }
+    let fullMonth = '';
     switch (month) {
         case 1:
-            oy = 'January'
+            fullMonth = 'January'
             break;
         case 2:
-            oy = 'February'
+            fullMonth = 'February'
             break;
         case 3:
-            oy = 'March'
+            fullMonth = 'March'
             break;
         case 4:
-            oy = 'April'
+            fullMonth = 'April'
             break;
         case 5:
-            oy = 'May'
+            fullMonth = 'May'
             break;
         case 6:
-            oy = 'June'
+            fullMonth = 'June'
             break;
         case 7:
-            oy = 'July'
+            fullMonth = 'July'
             break;
         case 8:
-            oy = 'August'
+            fullMonth = 'August'
             break;
         case 9:
-            oy = 'September'
+            fullMonth = 'September'
             break;
         case 10:
-            oy = 'October'
+            fullMonth = 'October'
             break;
         case 11:
-            oy = 'November'
+            fullMonth = 'November'
             break;
         case 12:
-            oy = 'December'
+            fullMonth = 'December'
             break;
     }
-
 </script>
 
 <template>
     <div class="border-b border-gray-200 md:pb-0.5 flex ">
-        <week-day v-for="(week,index) in weekArr" v-if="juftMonth.includes(oy)">
+        <week-day v-for="(week,index) in weekArr" v-if="juftMonth.includes(fullMonth)">
             <template #weekName>{{week }}</template>
             <template #dayNum>{{
                 store.day + index <= 30 ? store.day + index : ((store.day + index)-30*(Math.floor((store.day + index)/30)))
                 }}</template>
         </week-day>
-        <week-day v-for="(week,index) in weekArr" v-if="toqMonth.includes(oy)">
+        <week-day v-for="(week,index) in weekArr" v-if="toqMonth.includes(fullMonth )">
             <template #weekName>{{week }}</template>
             <template #dayNum>{{
                 store.day + index <= 31 ? store.day + index : ((store.day + index)-31*(Math.floor((store.day + index)/31)))
