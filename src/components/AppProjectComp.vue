@@ -5,8 +5,9 @@ import Sidebar from "./UI/Sidebar.vue";
 import InboxAdd from "../components/Inbox/InboxAdd.vue";
 import InboxSec from "./Inbox/InboxSec.vue";
 import AccountSection from "../components/AccountSection.vue"
-import taskCalendar from "./Inbox/taskCalendar.vue"
+import Comments from "./Inbox/Comments.vue"
 const store = useStore();
+
 </script>
 <template>
   <div>
@@ -18,9 +19,8 @@ const store = useStore();
          :showAddTask="store.$state.addBtn"
         class="absolute z-40 top-0"
       ></add-task>
-       
     </div>
-   <task-calendar></task-calendar>
+    <comments></comments>
   </div>
 </template>
 

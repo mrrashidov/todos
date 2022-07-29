@@ -1,29 +1,40 @@
 <script setup>
 import { useStore } from "../../store";
-import {ref} from 'vue'
-const file = ref(null);
-const onChange = function (e){
-    (e) => file.value = URL.createObjectURL(e.target.files[0]);
-    console.log(file);
-}
-const store = useStore();
+import { ref } from "vue";
 import commentSvg from "./commentSvg.vue";
 import InputField from "../UI/InputField.vue";
-import buttonField from "../UI/buttonField.vue"
+import buttonField from "../UI/buttonField.vue";
+import inputFile from "../UI/inputFile.vue";
+import comment from './comment.vue'
+const model = "";
+const store = useStore();
 function commentBorder() {
   store.$state.commentClick = true;
   store.$state.activityClick = false;
-
 }
 function activityBorder() {
   store.$state.commentClick = false;
   store.$state.activityClick = true;
 }
-const FileValue  = null
+const FileValue = null;
+
+function removeItem(index){
+  store.$state.documents.splice(index,1)
+}
 </script>
 <template>
   <div
-    class="bg-black fixed top-0 left-0 opacity-70 flex items-center justify-center w-full h-full"
+    class="
+      bg-black
+      top-0
+      left-0
+      opacity-70
+      flex
+      items-center
+      justify-center
+      w-full
+      h-full
+    "
   >
     <div class="opacity-100 bg-white w-5/12 p-5 rounded-md">
       <div class="flex justify-between">
@@ -132,23 +143,41 @@ const FileValue  = null
             placeholder="Comment"
           ></input-field>
         </div>
+        <div
+          v-for="(name,index) in store.$state.documents" :key="name"
+          class="
+            w-full flex rounded-md border-2 border-gray-300 bg-gray-200 py-2 px-3 mb-3  "
+        >
+          <span class="mr-4 hover:text-red-500" @click="removeItem(index)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M0 0h24v24H0z"></path>
+                <rect
+                  width="14"
+                  height="1"
+                  x="5"
+                  y="6"
+                  fill="currentColor"
+                  rx=".5"
+                ></rect>
+                <path
+                  fill="currentColor"
+                  d="M10 9h1v8h-1V9zm3 0h1v8h-1V9z"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  d="M17.5 6.5h-11V18A1.5 1.5 0 0 0 8 19.5h8a1.5 1.5 0 0 0 1.5-1.5V6.5zm-9 0h7V5A1.5 1.5 0 0 0 14 3.5h-4A1.5 1.5 0 0 0 8.5 5v1.5z"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          {{name}}
+        </div>
+        <comment></comment>
         <div class="flex justify-between">
           <div class="flex">
             <div class="mr-2 hover:bg-gray-400">
-              <label for="Fileinput" class="">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12.646 5.646c1.3-1.3 3.408-1.3 4.708 0 1.251 1.252 1.298 3.253.139 4.56l-.14.148-4.824 4.825c-.845.844-2.213.844-3.058 0-.802-.802-.842-2.078-.12-2.927l.12-.13 3.325-3.326c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07-3.325 3.325c-.454.453-.454 1.189 0 1.642.42.422 1.085.452 1.541.09l.101-.09 4.825-4.825c.91-.909.91-2.383 0-3.292-.868-.868-2.25-.908-3.165-.119l-.127.119-6.175 6.175c-1.365 1.364-1.365 3.578 0 4.942 1.316 1.317 3.42 1.364 4.793.141l.15-.14 3.674-3.676c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07-3.675 3.675c-1.756 1.755-4.602 1.755-6.358 0-1.7-1.701-1.753-4.425-.159-6.19l.16-.168 6.174-6.175z"
-                  ></path>
-                </svg>
-              </label>
-              <input @change="onChange" type="file" class="hidden" id="Fileinput" />
+              <input-file></input-file>
             </div>
             <div class="mr-2 hover:bg-gray-400">
               <svg width="24" height="24">
@@ -171,9 +200,7 @@ const FileValue  = null
           </div>
           <div>
             <button-field class="bg-red-600">
-                <span class="text-white">
-                    Comment
-                </span>
+              <span class="text-white"> Comment </span>
             </button-field>
           </div>
         </div>

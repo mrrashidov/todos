@@ -4,7 +4,7 @@ const attrs = useAttrs();
 const props = defineProps(["disabled"])
 </script>
 <template>
-  <button v-bind="attrs" :disabled="disabled" class="rounded-md outline-none border-transparent pt-2 px-3">
+  <button v-bind="attrs" :disabled="disabled" class="rounded-md outline-none border-transparent py-2 px-3">
     <slot></slot>
   </button>
 </template>

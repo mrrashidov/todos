@@ -114,7 +114,7 @@ const nextMonday = day.getNextWeekDay(1);
         </div>
         <div>
           <p class="text-sm text-gray-400">
-            {{ weekday == 6 ? "Mon" : weekday[day.getDay() + 1] }}
+            {{ weekday[day.getDay() + 1] }}
           </p>
         </div>
       </div>
