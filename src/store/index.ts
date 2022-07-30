@@ -22,6 +22,11 @@ export const useStore = defineStore('store', {
     remin: false,
     todayMain: true,
     day: new Date().getDate(),
+    inboxTitle: false,
+    labelTitle: false,
+    priorityTitle: false,
+    remindersTitle: false,
+    showTask: false,
   })
 
 })

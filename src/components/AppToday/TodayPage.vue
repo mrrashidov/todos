@@ -3,12 +3,13 @@ import SettingAccBtn from '@/components/UI/SettingAccBtn.vue'
 import TodaySvg from '@/components/AppToday/TodaySvg.vue'
 import addTask from '@/components/Inbox/addTask.vue'
 import ViewComp from '@/components/AppToday/ViewComp.vue'
+import hoverAddTask from  '@/components/UI/hoverAddTask.vue'
+
 import { useStore } from "../../store";
 const store = useStore();
 const weekDay = new Date().getDay();
 const day = new Date().getDate();
 const month = new Date().getMonth() + 1;
-
 let haft = ''
 let oy = ''
 switch (weekDay) {
@@ -96,13 +97,8 @@ switch (month) {
             <view-comp></view-comp>
         </div>
         <div>
-            <div class="flex md:mt-5 items-center add-task cursor-pointer">
-                <svg class="text-red-500 svg" width="13" height="13">
-                    <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"
-                        fill="currentColor" fill-rule="evenodd"></path>
-                </svg>
-                <p class="text-sm text md:ml-1 text-gray-500">Add task</p>
-            </div>
+<!--            hover task-->
+            <hover-add-task/>
             <div class="md:translate-x-[36%] md:mt-10">
                 <today-svg></today-svg>
             </div>
@@ -144,13 +140,4 @@ switch (month) {
     </div>
 </template>
 <style scoped>
-.add-task:hover .svg {
-    color: #fff;
-    background: red;
-    border-radius: 50%;
-}
-
-.add-task:hover .text {
-    color: red;
-}
 </style>

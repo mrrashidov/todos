@@ -1,5 +1,5 @@
       <script setup>
-import { useStore } from "../store";
+
 import addTask from "../components/Inbox/addTask.vue";
 import Sidebar from "./UI/Sidebar.vue";
 import InboxAdd from "../components/Inbox/InboxAdd.vue";
@@ -7,6 +7,7 @@ import InboxSec from "./Inbox/InboxSec.vue";
 import TodayPage from '@/components/AppToday/TodayPage.vue'
 import AccountSection from '@/components/AccountSection.vue'
 import UpcomingMain from '@/components/AppUpcoming/UpcomingMain.vue'
+import { useStore } from "@/store";
 const store = useStore();
 </script>
 <template>
@@ -18,7 +19,6 @@ const store = useStore();
       <account-section/>
 <!--      <today-page/>-->
       <upcoming-main/>
-
       <add-task
         :showAddTask="store.$state.addBtn"
         class="absolute z-10 top-0"
