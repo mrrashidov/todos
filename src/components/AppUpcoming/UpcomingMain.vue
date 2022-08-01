@@ -8,8 +8,8 @@
 </script>
 
 <template>
-    <div class="z-20 w-full md:pr-24 relative md:pl-24">
-        <div class="flex items-end justify-between md:-mt-12">
+    <div class="z-20 sticky top-1/2  w-3/4 md:pr-24  md:pl-24">
+        <div class="flex items-end justify-between md:-mt-60">
             <title-date/>
             <title-btn/>
         </div>

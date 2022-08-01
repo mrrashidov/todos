@@ -67,9 +67,6 @@
             fullMonth = 'December'
             break;
     }
-    onMounted(()=>{
-        console.log(store.day, fullMonth, week)
-    })
 </script>
 
 <template>

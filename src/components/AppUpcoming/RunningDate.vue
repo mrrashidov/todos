@@ -52,9 +52,9 @@
 </script>
 
 <template>
-    <div class="border-b border-gray-200 md:pb-0.5 flex ">
+    <div class="border-b border-gray-200 md:pb-0.5 flex">
         <week-day v-for="(week,index) in weekArr" v-if="juftMonth.includes(fullMonth)">
-            <template #weekName>{{week }}</template>
+            <template #weekName>{{week}}</template>
             <template #dayNum>{{
                 store.day + index <= 30 ? store.day + index : ((store.day + index)-30*(Math.floor((store.day + index)/30)))
                 }}</template>

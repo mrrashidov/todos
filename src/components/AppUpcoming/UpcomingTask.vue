@@ -1,13 +1,28 @@
 <script setup>
     import { useStore } from "@/store";
     const store = useStore();
+
+    const addTask = () =>{
+        if(store.taskItem){
+            store.upcomingTasks.push(store.taskItem);
+            store.taskDesc.push(store.description)
+            store.taskItem = ''
+        }
+    };
 </script>
 
 <template>
     <div>
         <div class="w-full rounded-xl bg-white border border-gray-200 md:p-3 md:mt-3">
-            <textarea class="w-full text-sm border-0 outline-none" placeholder="e.g.,Buy gift tomorrow at 6pm p1 #Errands"></textarea>
-            <input type="text" class="w-full text-sm border-0 outline-none" placeholder="Description">
+            <textarea
+                    v-model="store.taskItem"
+                    class="w-full text-sm border-0 outline-none"
+                    placeholder="e.g.,Buy gift tomorrow at 6pm p1 #Errands"></textarea>
+            <input
+                    type="text"
+                    class="w-full text-sm border-0 outline-none"
+                    placeholder="Description"
+                    v-model="store.description">
             <div class="flex items-center justify-between md:mt-3">
                 <div class="flex">
                     <div class="flex items-center text-sm md:p-0.5 text-green-500 border w-16 rounded hover:bg-gray-200">
@@ -53,7 +68,9 @@
                     @click="store.showTask = !store.showTask">
                 <p>Cancel</p>
             </div>
-            <div class="bg-red-300 md:ml-2 md:w-20 cursor-pointer text-center rounded md:pt-1 md:pb-1">
+            <div
+                    class="bg-red-500 hover:bg-red-400 md:ml-2 md:w-20 cursor-pointer text-center rounded md:pt-1 md:pb-1"
+                    @click="addTask">
                 <p class="text-white">Add task</p>
             </div>
         </div>

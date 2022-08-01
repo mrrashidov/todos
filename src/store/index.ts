@@ -27,6 +27,10 @@ export const useStore = defineStore('store', {
     priorityTitle: false,
     remindersTitle: false,
     showTask: false,
+    upcomingTasks:[],
+    taskDesc : [],
+    taskItem: '',
+    description: '',
   })
 
 })

@@ -10,7 +10,7 @@ function gull() {
 <template>
   <div>
     <div>
-      <div class="bg-redish flex px-[3vw] py-1 justify-between">
+      <div class="bg-redish flex px-[3vw] py-1 justify-between sticky top-0 z-30">
         <div class="flex items-center">
           <div @click="store.$state.asideMenu = !store.$state.asideMenu"
             class="hover:bg-appHeaderHover rounded-md p-1 mx-0.5 cursor-pointer">
