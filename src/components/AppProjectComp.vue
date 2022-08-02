@@ -1,8 +1,8 @@
       <script setup>
 import addTask from "@/components/Inbox/addTask.vue";
-import Sidebar from "@/components/UI/Sidebar.vue";
-import InboxAdd from "@/components/Inbox/InboxAdd.vue";
-import InboxSec from "@/compoents/Inbox/InboxSec.vue";
+import Sidebar from '@/components/UI/Sidebar.vue';
+import InboxAdd from '@/components/Inbox/InboxAdd.vue';
+import InboxSec from '@/components/Inbox/InboxSec.vue';
 import TodayPage from "@/components/AppToday/TodayPage.vue";
 import AccountSection from "@/components/AccountSection.vue";
 import UpcomingMain from "@/components/AppUpcoming/UpcomingMain.vue";
