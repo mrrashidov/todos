@@ -90,7 +90,7 @@
           >
             Log in
           </button>
-          <home-button @click="goSignUp"></home-button>
+          <home-button @click="goSignUp">Start for free</home-button>
         </div>
       </div>
     </div>
@@ -98,6 +98,7 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import HomeButton from '../components/UI/HomeButton.vue'
 
 const router = useRouter();
 

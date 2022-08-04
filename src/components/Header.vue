@@ -10,7 +10,8 @@
 
 <template>
   <header>
-      <navbar-comp></navbar-comp>
+      <navbar-comp>
+      </navbar-comp>
       <div class="w-full flex flex-col items-center justify-center my-40">
         <h1
           class="
@@ -29,7 +30,7 @@
           Become focused, organized, and calm with Todoist. The world’s #1 task
           manager and to-do list app.
         </h3>
-        <home-button></home-button>
+        <home-button>Start for free</home-button>
       </div>
 
       <div class="w-[full] mt-40 relative flex justify-between items-center">
