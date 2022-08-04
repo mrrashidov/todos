@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <a href="#" class="flex items-center mt-3 md:pl-2  cursor-pointer md:mr-2 rounded hover:bg-gray-300">
+    <a class="flex items-center mt-3 md:pl-2  cursor-pointer md:mr-2 rounded hover:bg-gray-300">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
              aria-hidden="true">
             <path fill-rule="evenodd" clip-rule="evenodd"

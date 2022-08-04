@@ -10,7 +10,6 @@ const attrs = useAttrs();
 const store = useStore();
 function Close(e) {
   store.$state.addbtn = false;
-  console.log(store.$state.addbtn, "from add task");
 }
 const input=ref("")
 function showCalendar(){
@@ -30,8 +29,12 @@ function showCalendar(){
           mt-14
           mx-auto
           shadow-2xl
+<<<<<<< HEAD
           z-100
           bg-white
+=======
+          z-10
+>>>>>>> ad56f59e2d23999dac7759ee4a08d3fa86906843
         "
       >
         <input-field

@@ -1,7 +1,7 @@
 <script setup>
-import Text from "../components/SlotText.vue"
-import Slotlink from "../components/SlotLink.vue"
-import DateSlot from "../components/DateSlots.vue"
+import Text from "../SlotText.vue"
+import Slotlink from "../UI/SlotLink.vue"
+import DateSlot from "../DateSlots.vue"
 </script>
 
 

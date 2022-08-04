@@ -12,7 +12,14 @@ export const useStore = defineStore('store', {
     subs: false,
     notif: false,
     backups: false,
-    intag: false
+    intag: false,
+    accShow: false,
+    viewComp: false,
+    general: false,
+    advanced: false,
+    theme: false,
+    productivity: false,
+    remin: false
   })
 })
 
