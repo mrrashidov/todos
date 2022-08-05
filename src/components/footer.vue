@@ -1,7 +1,15 @@
 <template>
   <div class="w-screen max-w-full h-auto bg-[#FFF9F3] mt-10">
     <div
-      class="footerImgSection w-screen max-w-full h-1/3 flex justify-center items-center"
+      class="
+        footerImgSection
+        w-screen
+        max-w-full
+        h-1/3
+        flex
+        justify-center
+        items-center
+      "
     >
       <div class="mr-20">
         <img src="images/footer.png" alt="img" class="w-96 mb-20" />
@@ -11,7 +19,17 @@
           Achieve peace of mind with Todoist
         </h1>
         <button
-          class="text-center w-32 h-8 bg-[#E44232] mt-5 rounded-xl text-white text-sm font-bold md:w-44 md:h-12 md:text-xl"
+          class="
+            text-center
+            w-32
+            h-8
+            bg-[#E44232]
+            mt-5
+            rounded-xl
+            text-white text-sm
+            font-bold
+            md:w-44 md:h-12 md:text-xl
+          "
         >
           Open Todist
         </button>
@@ -21,11 +39,27 @@
     <!-- footer 2-part -->
 
     <div
-      class="w-screen max-w-full flex flex-wrap h-auto border-t-2 mx-auto xl:w-3/4 xl:flex-wrap"
+      class="
+        w-screen
+        max-w-full
+        flex flex-wrap
+        h-auto
+        border-t-2
+        mx-auto
+        xl:w-3/4 xl:flex-wrap
+      "
     >
       <!-- 2-part 1-stack -->
       <div
-        class="w-screen mt-5 h-[100px] flex ml-10 p-4 md:p- md:w-1/2 md:ml-0 md:h-[200px]"
+        class="
+          w-screen
+          mt-5
+          h-[100px]
+          flex
+          ml-10
+          p-4
+          md:p- md:w-1/2 md:ml-0 md:h-[200px]
+        "
       >
         <div class="w-[300px] h-[150px] flex flex-wrap">
           <div class="w-12 rounded-md color-white">
@@ -74,7 +108,16 @@
       <!-- 2-part 2-stack -->
 
       <div
-        class="w-[200px] h-1/3 mt-20 flex flex-wrap ml-10 p-4 xl:mt-0 md:w-1/2 md:p-0 md:ml-0 md:mt-2 md:justify-evenly"
+        class="
+          w-[200px]
+          h-1/3
+          mt-20
+          flex flex-wrap
+          ml-10
+          p-4
+          xl:mt-0
+          md:w-1/2 md:p-0 md:ml-0 md:mt-2 md:justify-evenly
+        "
       >
         <ul class="mt-0 md:mt-0">
           <li
@@ -122,7 +165,16 @@
     </div>
     <!-- 3-part -->
     <div
-      class="w-screen h-[60px] mt-10 max-w-full bg-[#0000000D] flex items-center justify-around"
+      class="
+        w-screen
+        h-[60px]
+        mt-10
+        max-w-full
+        bg-[#0000000D]
+        flex
+        items-center
+        justify-around
+      "
     >
       <div
         class="w-[300px] flex justify-around items-center border-1 border-black"
@@ -140,12 +192,39 @@
         <p class="text-sm text-[#575757] cursor-pointer">Doist Inc</p>
       </div>
       <div
-        class="xl:w-36 relative flex justify-evenly items-center bg-[#cdcdcd] rounded-lg"
+        class="
+          xl:w-36
+          relative
+          flex
+          justify-evenly
+          items-center
+          bg-[#cdcdcd]
+          rounded-lg
+        "
       >
         <img src="images/internet.png" alt="image" class="w-5 h-5 ml-3" />
 
         <select
-          class="form-select cursor-pointer block w-full px-3 py-1.5 text-base focus:border-blue-600 font-normal text-gray-700 bg-[#cdcdcd] bg-clip-padding border-gray-300 rounded-lg transition ease-in-out outline-none m-0 focus:text-gray-700"
+          class="
+            form-select
+            cursor-pointer
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            focus:border-blue-600
+            font-normal
+            text-gray-700
+            bg-[#cdcdcd] bg-clip-padding
+            border-gray-300
+            rounded-lg
+            transition
+            ease-in-out
+            outline-none
+            m-0
+            focus:text-gray-700
+          "
           aria-label="Default select example"
         >
           <option selected>English</option>
