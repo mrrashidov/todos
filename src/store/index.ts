@@ -19,7 +19,19 @@ export const useStore = defineStore('store', {
     advanced: false,
     theme: false,
     productivity: false,
-    remin: false
+    remin: false,
+    todayMain: true,
+    day: new Date().getDate(),
+    inboxTitle: false,
+    labelTitle: false,
+    priorityTitle: false,
+    remindersTitle: false,
+    showTask: false,
+    upcomingTasks:[],
+    taskDesc : [],
+    taskItem: '',
+    description: '',
   })
+
 })
 
