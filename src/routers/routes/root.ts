@@ -11,7 +11,9 @@ export const root = [
     childrens : [
       {
         path: "2294361147",
-        component:() => import("@/components/appProject/Inbox/InboxAdd.vue")
+        component :{
+          default :() => import("../../components/AppToday/Inbox/InboxAdd.vue") 
+        } 
       },
       {
         path : "today",

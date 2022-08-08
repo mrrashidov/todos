@@ -13,8 +13,8 @@ const store = useStore();
   <div>
     <InboxSec />
     <div class="w-full flex">
-      <Sidebar/>
       <router-view/>
+      <Sidebar/>
     </div>
   </div>
 </template>
