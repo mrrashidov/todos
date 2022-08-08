@@ -12,7 +12,6 @@ weekday[3] = "Wed";
 weekday[4] = "Thu";
 weekday[5] = "Fri";
 weekday[6] = "Sat";
-
 Date.prototype.getNextWeekDay = function (d) {
   if (d) {
     var next = this;
@@ -21,6 +20,7 @@ Date.prototype.getNextWeekDay = function (d) {
   }
 };
 const nextMonday = day.getNextWeekDay(1);
+
 </script>
 <template>
   <div

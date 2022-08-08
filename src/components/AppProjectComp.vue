@@ -1,14 +1,13 @@
       <script setup>
-import { useStore } from "../store";
-import addTask from "../components/Inbox/addTask.vue";
-import Sidebar from "./UI/Sidebar.vue";
-import InboxAdd from "../components/Inbox/InboxAdd.vue";
-import InboxSec from "./Inbox/InboxSec.vue";
+
 
 import TodayPage from '@/components/AppToday/TodayPage.vue'
 import AccountSection from '@/components/AccountSection.vue'
 const store = useStore();
+=======
+>>>>>>> Stashed changes
 
+const store = useStore();
 </script>
 <template>
   <div>
@@ -19,12 +18,16 @@ const store = useStore();
       <account-section></account-section>
       <today-page></today-page>
       <add-task
+<<<<<<< Updated upstream
 
         :showAddTask="store.$state.addBtn"
         class="absolute z-10 top-0"
+=======
+        :showAddTask="store.$state.addBtn"
+        class="absolute top-0"
+>>>>>>> Stashed changes
       ></add-task>
     </div>
-    <comments></comments>
   </div>
 </template>
 

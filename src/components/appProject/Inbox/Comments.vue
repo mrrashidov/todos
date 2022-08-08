@@ -10,6 +10,12 @@ const store = useStore();
 import commentSvg from "./commentSvg.vue";
 import InputField from "../UI/InputField.vue";
 import buttonField from "../UI/buttonField.vue";
+import inputFile from "../UI/inputFile.vue";
+import comment from "./comment.vue";
+import  { useRouter } from 'vue-router'
+const router = useRouter()
+const model = "";
+const store = useStore();
 function commentBorder() {
   store.$state.commentClick = true;
   store.$state.activityClick = false;
@@ -17,6 +23,7 @@ function commentBorder() {
 function activityBorder() {
   store.$state.commentClick = false;
   store.$state.activityClick = true;
+  console.log(store.$state.comments.commentValue);
 }
 
 function removeItem(index) {
@@ -31,7 +38,7 @@ function removeItem(index) {
       fixed
       top-0
       left-0
-      opacity-70
+      bg-opacity-50
       flex
       items-center
       justify-center
@@ -46,6 +53,7 @@ function removeItem(index) {
             <svg
               width="24"
               height="24"
+
               viewBox="0 0 24 24"
               class="project_icon project_icon_inbox"
             >
@@ -64,7 +72,7 @@ function removeItem(index) {
             <span>Inbox</span>
           </div>
         </div>
-        <div>
+        <div @click="goAppProject"  class="hover:bg-gray-400">
           <svg viewBox="0 0 24 24" class="icon_close" width="24" height="24">
             <path
               fill="currentColor"
@@ -130,18 +138,29 @@ function removeItem(index) {
           </div>
         </div>
       </div>
-      <div class="w-full p-24">
-        <div class="text-center">
-          <comment-svg></comment-svg>
-          <span
-            >Keep all your high-level information organized here with project
-            comments.</span
-          >
+      <div >
+        <div v-show="store.$state.commentClick"  class="w-full ">
+          <div 
+          v-if="store.$state.documents.length == 0"
+          class="text-center px-24 py-28">
+            <comment-svg></comment-svg>
+            <span
+              >Keep all your high-level information organized here with project
+              comments.</span
+            >
+          </div>
+          <div v-else class="overflow-y-scroll h-[250px]">
+            <comment :array="store.$state.documents"></comment>
+          </div>
         </div>
       </div>
-      <div class="w-full rounded-lg border-2 border-gray-400 border-solid p-5">
+      <div v-show="store.$state.activityClick">
+          <div class=" w-full bg-red-500 h-[450px]"> Activity Section </div>
+      </div>
+      <div v-if="store.$state.commentClick" class="w-full rounded-lg border-2 border-gray-400 border-solid p-5">
         <div>
           <input-field
+            v-model="store.$state.Inputvalue"
             class="w-full border-none outline-none mb-5"
             placeholder="Comment"
           ></input-field>
@@ -184,12 +203,12 @@ function removeItem(index) {
               </g>
             </svg>
           </span>
-          {{ name }}
+          {{name}}
         </div>
-        <comment></comment>
         <div class="flex justify-between">
           <div class="flex">
             <div class="mr-2 hover:bg-gray-400">
+              <!-- this is input type:file -->
               <input-file></input-file>
             </div>
             <div class="flex justify-between">
@@ -246,3 +265,8 @@ function removeItem(index) {
     </div>
   </div>
 </template>
+<style scoped>
+  .ins-opacity{
+    opacity: 1 !important;
+  }
+</style>

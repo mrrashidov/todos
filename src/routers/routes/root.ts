@@ -40,6 +40,10 @@ export const root = [
   {
     path: "/app/settings/subscription",
     component: () => import("@/views/SettingSubscription.vue")
+  },
+  {
+    path : "/app/project/comments",
+    component : ()=> import("@/components/Inbox/Comments.vue")
   }
 ];
 

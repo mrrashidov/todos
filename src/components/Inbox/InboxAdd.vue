@@ -1,7 +1,16 @@
 
 <script setup>
+<<<<<<< Updated upstream
 import addTask from "./addTask.vue"
 import AccountSection from '@/components/AccountSection.vue'
+=======
+  import addTask from "./addTask.vue"
+  import {useRouter} from 'vue-router'
+  const router = useRouter()
+  function goComments(){
+    router.push('project/comments')
+  }
+>>>>>>> Stashed changes
 </script>
 
 <template>
@@ -29,9 +38,104 @@ import AccountSection from '@/components/AccountSection.vue'
           justify-between
           items-center
           my-4
+<<<<<<< Updated upstream
         ">
       <div class="sm:w-1/5 md:w-1/5 lg:w-1/5 xl:w-1/5 2xl:w-1/5 w-1/5">
         <h2 class="text-xl font-bold text-black">Inbox</h2>
+=======
+        "
+      >
+        <div class="sm:w-1/5 md:w-1/5 lg:w-1/5 xl:w-1/5 2xl:w-1/5 w-1/5">
+          <h2 class="text-xl font-bold text-black">Inbox</h2>
+        </div>
+        <div class="sm:w-1/4 md:w-1/4 lg:w-2/5 xl:w-[30%] 2xl:w-1/4 w-1/4">
+          <ul class="w-full flex justify-between items-center">
+            <li
+              @click.stop="goComments"
+              class="
+                z-50
+                flex
+                items-center
+                text-sm
+                font-base
+                text-slate-500
+                cursor-pointer
+                hover:text-black
+              "
+            >
+              <svg
+                class="mx-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                data-svgs-path="sm1/comments.svg"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                  d="M11.707 20.793A1 1 0 0 1 10 20.086V18H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.5l-2.793 2.793zM11 20.086L14.086 17H19a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h6v3.086z"
+                ></path>
+              </svg>
+              <span class="lg:block xl:block 2xl:block hidden"> Comments</span>
+            </li>
+            <li
+              class="
+                flex
+                items-center
+                text-sm
+                font-base
+                text-slate-500
+                cursor-pointer
+                hover:text-black
+              "
+            >
+              <svg
+                class="mx-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15 14.5a2 2 0 011.936 1.498L19.5 16a.5.5 0 010 1l-2.563.001a2.001 2.001 0 01-3.874 0L4.5 17a.5.5 0 010-1l8.564-.002A2 2 0 0115 14.5zm-.982 1.81l.005-.025-.005.026-.003.014-.004.025-.007.061A.897.897 0 0014 16.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0016 16.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026a.998.998 0 00-1.843.043l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047zM9 9.5a2 2 0 011.936 1.498L19.5 11a.5.5 0 010 1l-8.563.001a2.001 2.001 0 01-3.874 0L4.5 12a.5.5 0 010-1l2.564-.002A2 2 0 019 9.5zm0 1a.998.998 0 00-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C8 11.441 8 11.471 8 11.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06A.877.877 0 0010 11.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 0 009 10.5zm6-6a2 2 0 011.936 1.498L19.5 6a.5.5 0 010 1l-2.563.001a2.001 2.001 0 01-3.874 0L4.5 7a.5.5 0 010-1l8.564-.002A2 2 0 0115 4.5zm0 1a.998.998 0 00-.93.634l-.014.034-.007.022-.014.047-.002.009v.001l-.005.016-.01.047.005-.025-.005.026-.003.014-.004.025-.007.061C14 6.441 14 6.471 14 6.5l.008.125.007.047-.001.002.003.014.006.024h-.001l.004.018.016.058.007.021.004.013.009.026.013.033.012.027-.011-.026.019.043-.008-.017.029.06-.018-.037.048.09a1 1 0 001.784-.155l.015-.039.006-.018-.015.039.022-.06-.001-.001.016-.057.004-.018.005-.024.001-.006v-.001l.005-.033.008-.06C16 6.557 16 6.528 16 6.5l-.008-.124-.007-.051-.001-.001-.003-.014-.01-.047-.004-.016-.007-.024-.01-.034-.004-.012-.01-.03-.006-.013-.007-.017-.01-.026A1.002 1.002 0 0015 5.5z"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                ></path>
+              </svg>
+              <span class="lg:block xl:block 2xl:block hidden">View</span>
+            </li>
+            <li
+              class="
+                flex
+                items-center
+                text-sm
+                font-base
+                text-slate-500
+                cursor-pointer
+                hover:text-black
+              "
+            >
+              <svg
+                class="mx-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  transform="translate(3 10)"
+                >
+                  <circle cx="2" cy="2" r="2"></circle>
+                  <circle cx="9" cy="2" r="2"></circle>
+                  <circle cx="16" cy="2" r="2"></circle>
+                </g>
+              </svg>
+            </li>
+          </ul>
+        </div>
+>>>>>>> Stashed changes
       </div>
       <div class="sm:w-1/4 md:w-1/4 lg:w-2/5 xl:w-[30%] 2xl:w-1/4 w-1/4">
         <ul class="w-full flex justify-between items-center">

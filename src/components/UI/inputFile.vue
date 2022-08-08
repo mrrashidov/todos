@@ -6,7 +6,8 @@ const path = ref("");
 const file = ref(null);
 const onChange = (event) => {
     const files = event.target.files;
-    store.$state.documents.push(files[0].name)
+    store.$state.documents.push(files[0])
+    console.log(files);
   const fileReader = new FileReader();
   fileReader.addEventListener(
       "load",

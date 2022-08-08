@@ -41,6 +41,7 @@ function toRout(root){
                         </g>
                     </svg>
                     <p class="ml-1">Settings</p>
+                    
                 </div>
                 <p>O then S</p>
             </div>

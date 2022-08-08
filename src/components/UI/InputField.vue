@@ -1,22 +1,23 @@
-
+<!-- CustomInput.vue -->
 <script setup>
-import {ref} from 'vue'
-import { useAttrs } from 'vue'
-const props = defineProps(["value"])
-const attrs =useAttrs()
+import { computed } from "vue";
 
+const props = defineProps(["modelValue"]);
+const emit = defineEmits(["update:modelValue"]);
+
+const value = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(value) {
+    emit("update:modelValue", value);
+  },
+});
 </script>
-<template>
- <div>
-     <input
-     class="border-black"
-    v-bind="attrs"
-    :value="value"
-    @input="(event) => (value = event.target.value)"
-  />
- </div>
-</template>
 
+<template>
+  <input v-model="value" />
+</template>
 
 
 
