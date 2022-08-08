@@ -39,10 +39,14 @@ export const useStore = defineStore('store', {
     taskDesc : [],
     taskItem: '',
     description: '',
+<<<<<<< HEAD
 =======
     commentshow : false
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> main
   })
+
 })
 
