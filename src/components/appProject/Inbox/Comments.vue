@@ -1,13 +1,15 @@
 <script setup>
-import { useStore } from "../../store";
+import { useStore } from "../../../store";
 import { ref } from "vue";
+const file = ref(null);
+const onChange = function (e) {
+  (e) => (file.value = URL.createObjectURL(e.target.files[0]));
+  console.log(file);
+};
+const store = useStore();
 import commentSvg from "./commentSvg.vue";
 import InputField from "../UI/InputField.vue";
 import buttonField from "../UI/buttonField.vue";
-import inputFile from "../UI/inputFile.vue";
-import comment from './comment.vue'
-const model = "";
-const store = useStore();
 function commentBorder() {
   store.$state.commentClick = true;
   store.$state.activityClick = false;
@@ -16,16 +18,17 @@ function activityBorder() {
   store.$state.commentClick = false;
   store.$state.activityClick = true;
 }
-const FileValue = null;
 
-function removeItem(index){
-  store.$state.documents.splice(index,1)
+function removeItem(index) {
+  store.$state.documents.splice(index, 1);
 }
 </script>
+
 <template>
   <div
     class="
       bg-black
+      fixed
       top-0
       left-0
       opacity-70
@@ -143,10 +146,20 @@ function removeItem(index){
             placeholder="Comment"
           ></input-field>
         </div>
+
         <div
-          v-for="(name,index) in store.$state.documents" :key="name"
+          v-for="(name, index) in store.$state.documents"
+          :key="name"
           class="
-            w-full flex rounded-md border-2 border-gray-300 bg-gray-200 py-2 px-3 mb-3  "
+            w-full
+            flex
+            rounded-md
+            border-2 border-gray-300
+            bg-gray-200
+            py-2
+            px-3
+            mb-3
+          "
         >
           <span class="mr-4 hover:text-red-500" @click="removeItem(index)">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -171,7 +184,7 @@ function removeItem(index){
               </g>
             </svg>
           </span>
-          {{name}}
+          {{ name }}
         </div>
         <comment></comment>
         <div class="flex justify-between">
@@ -179,29 +192,54 @@ function removeItem(index){
             <div class="mr-2 hover:bg-gray-400">
               <input-file></input-file>
             </div>
-            <div class="mr-2 hover:bg-gray-400">
-              <svg width="24" height="24">
-                <path
-                  fill="currentColor"
-                  fill-rule="nonzero"
-                  d="M17.5 10a.5.5 0 0 1 .492.41l.008.09V12a6 6 0 0 1-5.5 5.98V20h3a.5.5 0 0 1 .492.41l.008.09a.5.5 0 0 1-.41.492L15.5 21h-7a.5.5 0 0 1-.09-.992L8.5 20h3v-2.02a6 6 0 0 1-5.495-5.745L6 12v-1.5a.5.5 0 0 1 .992-.09L7 10.5V12a5 5 0 0 0 9.995.217L17 12v-1.5a.5.5 0 0 1 .5-.5zM12 3a4 4 0 0 1 4 4v5a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4zm0 1a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3z"
-                ></path>
-              </svg>
+            <div class="flex justify-between">
+              <div class="flex">
+                <div class="mr-2 hover:bg-gray-400">
+                  <label for="Fileinput" class="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.646 5.646c1.3-1.3 3.408-1.3 4.708 0 1.251 1.252 1.298 3.253.139 4.56l-.14.148-4.824 4.825c-.845.844-2.213.844-3.058 0-.802-.802-.842-2.078-.12-2.927l.12-.13 3.325-3.326c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07-3.325 3.325c-.454.453-.454 1.189 0 1.642.42.422 1.085.452 1.541.09l.101-.09 4.825-4.825c.91-.909.91-2.383 0-3.292-.868-.868-2.25-.908-3.165-.119l-.127.119-6.175 6.175c-1.365 1.364-1.365 3.578 0 4.942 1.316 1.317 3.42 1.364 4.793.141l.15-.14 3.674-3.676c.196-.195.512-.195.708 0 .173.174.192.443.057.638l-.057.07-3.675 3.675c-1.756 1.755-4.602 1.755-6.358 0-1.7-1.701-1.753-4.425-.159-6.19l.16-.168 6.174-6.175z"
+                      ></path>
+                    </svg>
+                  </label>
+                  <input
+                    @change="onChange"
+                    type="file"
+                    class="hidden"
+                    id="Fileinput"
+                  />
+                </div>
+                <div class="mr-2 hover:bg-gray-400">
+                  <svg width="24" height="24">
+                    <path
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      d="M17.5 10a.5.5 0 0 1 .492.41l.008.09V12a6 6 0 0 1-5.5 5.98V20h3a.5.5 0 0 1 .492.41l.008.09a.5.5 0 0 1-.41.492L15.5 21h-7a.5.5 0 0 1-.09-.992L8.5 20h3v-2.02a6 6 0 0 1-5.495-5.745L6 12v-1.5a.5.5 0 0 1 .992-.09L7 10.5V12a5 5 0 0 0 9.995.217L17 12v-1.5a.5.5 0 0 1 .5-.5zM12 3a4 4 0 0 1 4 4v5a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4zm0 1a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V7a3 3 0 0 0-3-3z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mr-2 hover:bg-gray-400">
+                  <svg width="24" height="24" class="hover:bg-gray-400">
+                    <path
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                      d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm2.45 8a.5.5 0 0 1 .49.6 3 3 0 0 1-5.88 0 .5.5 0 0 1 .49-.6h4.9zm.05-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-5 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <button-field class="bg-red-600">
+                  <span class="text-white"> Comment </span>
+                </button-field>
+              </div>
             </div>
-            <div class="mr-2 hover:bg-gray-400">
-              <svg width="24" height="24" class="hover:bg-gray-400">
-                <path
-                  fill="currentColor"
-                  fill-rule="nonzero"
-                  d="M12 4a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 1a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm2.45 8a.5.5 0 0 1 .49.6 3 3 0 0 1-5.88 0 .5.5 0 0 1 .49-.6h4.9zm.05-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-5 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div>
-            <button-field class="bg-red-600">
-              <span class="text-white"> Comment </span>
-            </button-field>
           </div>
         </div>
       </div>

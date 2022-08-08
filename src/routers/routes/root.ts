@@ -7,7 +7,20 @@ export const root = [
   { path: "/features", component: () => import("@/views/Features.vue") },
   {
     path: "/app/project",
-    component: () => import("@/components/AppProjectComp.vue"),
+    component: () => import("@/components/appProject/main/AppProjectComp.vue"),
+    childrens : [
+      {
+        path: "2294361147",
+        component:() => import("@/components/appProject/Inbox/InboxAdd.vue")
+      },
+      {
+        path : "today",
+        component: {
+          default : () => import("@/components/appProject/AppToday/TodayPage.vue")
+        }
+      }
+      
+    ]
   },
   
   {

@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import {useAttrs} from 'vue'
-import { useStore } from "../store";
+import { useStore } from "@/store";
 const store = useStore();
 const attrs = useAttrs()
 const router = useRouter()
@@ -15,12 +15,8 @@ function toRout(root){
 
 <template>
     <div
-<<<<<<< HEAD
-        class="md:w-1/5 md:pl-4 md:pr-4 md:pt-3 md:h-auto md:pb-3  md:right-20 md:top-16 bg-gray-50 border-slate-400 border rounded-xl">
-=======
         v-show="store.accShow"
         class="md:w-[22%] md:pl-4 md:pr-4 md:pt-3 md:h-auto md:pb-3 absolute md:top-2 z-30  md:right-5 bg-gray-50 border-slate-400 border rounded-xl">
->>>>>>> main
         <div>
             <div class="flex items-center">
                 <img class="h-14 rounded-full m-1 cursor-pointer"
