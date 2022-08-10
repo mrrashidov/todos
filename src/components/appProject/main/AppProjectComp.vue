@@ -7,14 +7,14 @@ import InboxSec from "@/components/appProject/Inbox/InboxSec.vue";
 import TodayPage from '@/components/appProject/AppToday/TodayPage.vue'
 import AccountSection from '@/components/AccountSection.vue'
 const store = useStore();
-
+import {useRouter} from "vue-router"
 </script>
 <template>
   <div>
     <InboxSec />
     <div class="w-full flex">
-      <router-view/>
       <Sidebar/>
+      <router-view/>
     </div>
   </div>
 </template>

@@ -5,81 +5,14 @@ import addTask from '@/components/appProject/Inbox/addTask.vue'
 import ViewComp from '@/components/appProject/AppToday/ViewComp.vue'
 import { useStore } from "@/store";
 const store = useStore();
-const weekDay = new Date().getDay();
-const day = new Date().getDate();
-const month = new Date().getMonth() + 1;
-
-let haft = ''
-let oy = ''
-switch (weekDay) {
-    case 1:
-        haft = 'Mon'
-        break;
-    case 2:
-        haft = 'Tue'
-        break;
-    case 3:
-        haft = 'Wen'
-        break;
-    case 4:
-        haft = 'Thur'
-        break;
-    case 5:
-        haft = 'Fri'
-        break;
-    case 6:
-        haft = 'Satur'
-        break;
-    case 7:
-        haft = 'Sun'
-        break;
-}
-switch (month) {
-    case 1:
-        oy = 'January'
-        break;
-    case 2:
-        oy = 'February'
-        break;
-    case 3:
-        oy = 'March'
-        break;
-    case 4:
-        oy = 'April'
-        break;
-    case 5:
-        oy = 'May'
-        break;
-    case 6:
-        oy = 'June'
-        break;
-    case 7:
-        oy = 'July'
-        break;
-    case 8:
-        oy = 'August'
-        break;
-    case 9:
-        oy = 'September'
-        break;
-    case 10:
-        oy = 'October'
-        break;
-    case 11:
-        oy = 'November'
-        break;
-    case 12:
-        oy = 'December'
-        break;
-}
 </script>
 
 <template>
-    <div class="md:w-4/5 z-20 md:pr-32 md:pl-28 overflow-x-hidden">
+    <div class="md:w-4/5 z-20 md:pr-32 md:pl-28 overflow-x-hidden mt-20">
         <div class="flex items-end justify-between md:">
             <div class="flex items-center">
                 <p class="text-xl font-bold">Today</p>
-                <p class="text-xs md:mt-1 md:ml-2 text-gray-500">{{ haft }} {{ day }} {{ oy }}</p>
+                <p class="text-xs md:mt-1 md:ml-2 text-gray-500">{{new Date().toUTCString()}}</p>
             </div>
             <div
                 @click="store.viewComp = !store.viewComp"

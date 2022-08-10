@@ -8,23 +8,29 @@ export const root = [
   {
     path: "/app/project",
     component: () => import("@/components/appProject/main/AppProjectComp.vue"),
-    childrens : [
+    children: [
       {
         path: "2294361147",
-        component :{
-          default :() => import("../../components/AppToday/Inbox/InboxAdd.vue") 
-        } 
+        component: () => import("@/components/appProject/Inbox/InboxAdd.vue"),
+        children : [
+          {
+            path : "comments",
+            component : () => import("@/components/appProject/Inbox/Comments.vue")
+          }
+        ]
       },
       {
-        path : "today",
-        component: {
-          default : () => import("@/components/appProject/AppToday/TodayPage.vue")
-        }
-      }
-      
+        path: "today",
+        component: () => import("@/components/appProject/AppToday/TodayPage.vue")
+      },
+      {
+        path: "upcoming",
+        components:() => import("@/components/appProject/AppUpcoming/UpcomingMain.vue")
+      },
+
     ]
   },
-  
+
   {
     path: "/app/onboard/usecase",
     component: () => import("@/components/Register/OnboardUseCase.vue"),
@@ -42,8 +48,7 @@ export const root = [
     component: () => import("@/views/SettingSubscription.vue")
   },
   {
-    path : "/app/project/comments",
-    component : ()=> import("@/components/Inbox/Comments.vue")
+    path: "/app/project/comments",
+    component: () => import("@/components/Inbox/Comments.vue")
   }
 ];
-

@@ -20,7 +20,6 @@ export const useStore = defineStore('store', {
     inputTypeFile: "",
     documents: [],
     comments: [],
-<<<<<<< Updated upstream
     accShow: false,
     viewComp: false,
     general: false,
@@ -39,13 +38,7 @@ export const useStore = defineStore('store', {
     taskDesc : [],
     taskItem: '',
     description: '',
-<<<<<<< HEAD
-=======
     commentshow : false
-
->>>>>>> Stashed changes
-=======
->>>>>>> main
   })
 
 })

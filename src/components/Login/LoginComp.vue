@@ -10,11 +10,7 @@ const goLogin = () => {
   router.push("/auth/signup");
 };
 const goAppProject = () => {
-  router.push("/app/project");
-};
-
-const handleSignIn = async () => {
-  console.log("ok");
+  router.push("/app/project/today");
 };
 </script>
 

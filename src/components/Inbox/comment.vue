@@ -1,26 +1,24 @@
 <script setup>
     import {useStore} from "../../store"
     const store = useStore()
-    const    props = defineProps(["array"])
     console.log();
     let arr = store.$state.comments
 </script>
 
 <template>
   <div>
-    <div v-for="name in array" :key="name">
-         <div class="flex mb-3">
-      <div class=" mr-3">
-        <img src="public/images/video-preview-features.webp" class="  rounded-full h-12 w-12" alt="" />
+    <div v-for="name in arr" :key="name">
+         <div class="flex mb-5">
+      <div class="w-12 h-12 rounded-full mr-3">
+        <img src=" name.imgSrc" alt="" />
       </div>
       <div class="mr-3">
-        <div>example@gmail.com 
-        </div>
-        <div>commentValue</div>
+        <div>{{name.userName}}</div>
+        <div>{{name.commentValue}}</div>
       </div>
-      <div>{{name.lastModifiedDate.toLocaleString()}}</div>
+      <div>{{name.date}}</div>
     </div>
-    <div class="flex p-2 rounded-md border-2 border-gray-300 w-3/6">
+    <div class="flex p-2 rounded-md border-2 border-gray-300">
       <div class="mr-3">
         <svg
           data-svgs-path="ft/ft_generic.svg"
@@ -52,7 +50,7 @@
       </div>
       <div>
         <a href="name.fileUrl" class="no-underline hover:opacity-80">
-            {{name.name}}
+            {{name.fileName}}
         </a>
       </div>
     </div>
