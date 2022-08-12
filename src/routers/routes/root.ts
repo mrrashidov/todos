@@ -20,12 +20,12 @@ export const root = [
         ]
       },
       {
-        path: "today",
-        component: () => import("@/components/appProject/AppToday/TodayPage.vue")
+        path: "upcoming",
+        component: () => import("@/components/appProject/AppUpcoming/UpcomingMain.vue")
       },
       {
-        path: "upcoming",
-        components:() => import("@/components/appProject/AppUpcoming/UpcomingMain.vue")
+        path: "today",
+        component:() => import("@/components/appProject/AppToday/TodayPage.vue")
       },
 
     ]

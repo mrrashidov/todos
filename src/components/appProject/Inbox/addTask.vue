@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import InputField from "@/components/UI/InputField.vue";
 import svgTitle from "@/components/appProject/Inbox/svgTitle.vue";
 import buttonField from "@/components/UI/buttonField.vue";
-import taskCalendar from "@/components/appProject/Inbox/taskCalendar.vue"
+import taskCalendar from "@/components/appProject/Inbox/taskCalendar.vue";
 import { useStore } from "@/store";
 import { useAttrs } from "vue";
 const props = defineProps(["showAddTask"]);
@@ -12,13 +12,12 @@ const store = useStore();
 function Close(e) {
   store.$state.addbtn = false;
 }
-function showCalendar(){
-  store.$state.showdatapicker=!store.$state.showdatapicker
+function showCalendar() {
+  store.$state.showdatapicker = !store.$state.showdatapicker;
 }
-
 </script>
 <template>
-  <div v-bind="attrs" class="w-full h-full" @click.self="Close">
+  <div v-bind="attrs" @click.self="Close">
     <transition name="bounce">
       <div
         v-show="store.$state.addbtn"
@@ -30,24 +29,24 @@ function showCalendar(){
           mt-14
           mx-auto
           shadow-2xl
-<<<<<<< HEAD
           z-100
           bg-white
-=======
-          z-10
->>>>>>> ad56f59e2d23999dac7759ee4a08d3fa86906843
         "
       >
-        <input-field
-          class="outline-none mb-1"
-          placeholder="Task name"
-          type="text"
-        ></input-field>
-        <input-field
-          class="outline-none"
-          placeholder="description"
-          type="text"
-        ></input-field>
+        <div class="mb-4">
+          <input-field
+            class="outline-none mb-1"
+            placeholder="Task name"
+            type="text"
+          ></input-field>
+        </div>
+        <div>
+          <input-field
+            class="outline-none"
+            placeholder="description"
+            type="text"
+          ></input-field>
+        </div>
         <div class="flex justify-between w-full my-5">
           <div class="flex">
             <label
@@ -78,9 +77,14 @@ function showCalendar(){
                 ></path>
               </svg>
               <span>Today</span>
-
             </label>
-            <input ref="input" class="-translate-x-20 translate-y-96 ml-20 mt-48 absolute w-0"  type="date" name="dateInput" id="dateInput">
+            <input
+              ref="input"
+              class="-translate-x-20 translate-y-96 ml-20 mt-48 absolute w-0"
+              type="date"
+              name="dateInput"
+              id="dateInput"
+            />
             <div
               class="
                 px-1
@@ -208,7 +212,7 @@ function showCalendar(){
         <div class="flex justify-end w-full">
           <div class="flex">
             <button-field
-              @click="store.$state.addbtn=false"
+              @click="store.$state.addbtn = false"
               :disabled="false"
               class="bg-gray-300 text-gray-700 mr-2"
             >
@@ -231,7 +235,7 @@ function showCalendar(){
 .bounce-leave-active {
   animation: bounce-in 0.5s reverse;
 }
-.z-100{
+.z-100 {
   z-index: 100;
 }
 @keyframes bounce-in {

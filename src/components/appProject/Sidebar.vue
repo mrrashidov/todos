@@ -62,7 +62,7 @@ const store = useStore();
                           transform="translate(4 2)"
                           font-weight="500"
                         >
-                          <tspan x="8" y="15" text-anchor="middle">14</tspan>
+                          <tspan x="8" y="15" text-anchor="middle">{{new Date().getDate()}}</tspan>
                         </text>
                       </g>
                     </svg>
