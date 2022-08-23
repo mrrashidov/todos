@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useStore = defineStore('store', {
   state: () => ({
+    Inputvalue : "",
     overlay: false,
     addbtn: false,
     firstTitle: false,
@@ -13,6 +14,12 @@ export const useStore = defineStore('store', {
     notif: false,
     backups: false,
     intag: false,
+    showdatapicker: false,
+    commentClick: true,
+    activityClick: false,
+    inputTypeFile: "",
+    documents: [],
+    comments: [],
     accShow: false,
     viewComp: false,
     general: false,
@@ -31,6 +38,7 @@ export const useStore = defineStore('store', {
     taskDesc : [],
     taskItem: '',
     description: '',
+    commentshow : false
   })
 
 })

@@ -1,19 +1,25 @@
+<!-- CustomInput.vue -->
 <script setup>
-    import { computed } from "vue";
+import { computed } from "vue";
 
-    const props = defineProps(["modelValue"]);
-    const emit = defineEmits(["update:modelValue"]);
+const props = defineProps(["modelValue"]);
+const emit = defineEmits(["update:modelValue"]);
 
-    const value = computed({
-        get() {
-            return props.modelValue;
-        },
-        set(value) {
-            emit("update:modelValue", value);
-        },
-    });
+const value = computed({
+  get() {
+    return props.modelValue;
+  },
+  set(value) {
+    emit("update:modelValue", value);
+  },
+});
 </script>
 
 <template>
-    <input v-model="value" />
+  <input v-model="value" />
 </template>
+
+
+
+
+

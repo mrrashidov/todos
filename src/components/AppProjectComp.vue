@@ -8,6 +8,7 @@ import AccountSection from "@/components/AccountSection.vue";
 import UpcomingMain from "@/components/AppUpcoming/UpcomingMain.vue";
 import { useStore } from "@/store";
 const store = useStore();
+
 </script>
 <template>
   <div>
@@ -19,11 +20,11 @@ const store = useStore();
       <!--      <today-page/>-->
       <upcoming-main />
       <add-task
-
         :showAddTask="store.$state.addBtn"
         class="absolute z-10 top-0"
       ></add-task>
     </div>
+    <comments></comments>
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 <script setup>
-import AppProjectComp from "../components/AppProjectComp.vue";
+import AppProjectComp from "@/components/appProject/main/AppProjectComp.vue";
 </script>
 
 <template>
   <div class="">
-    <AppProject />
+    <AppProjectComp />
   </div>
 </template>

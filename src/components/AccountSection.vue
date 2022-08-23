@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
-import { useRouter, useRoute } from "vue-router";
-import { useAttrs } from "vue";
+import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import {useAttrs} from 'vue'
 import { useStore } from "@/store";
 const store = useStore();
 const attrs = useAttrs();
@@ -10,6 +10,7 @@ const route = useRoute();
 function toRout(root) {
   router.push(`${root}`);
 }
+
 </script>
 
 <template>

@@ -1,26 +1,10 @@
 <script setup>
-import InputField from "../UI/InputField.vue";
-import { useStore } from "../../store";
+import InputField from "@/components/UI/InputField.vue";
+import { useStore } from "@/store";
 const store = useStore();
-const month = new Date().getMonth() + 1;
-var day = new Date();
-var weekday = new Array(7);
-weekday[0] = "Sun";
-weekday[1] = "Mon";
-weekday[2] = "Tue";
-weekday[3] = "Wed";
-weekday[4] = "Thu";
-weekday[5] = "Fri";
-weekday[6] = "Sat";
-Date.prototype.getNextWeekDay = function (d) {
-  if (d) {
-    var next = this;
-    next.setDate(this.getDate() - this.getDay() + 7 + d);
-    return next;
-  }
-};
-const nextMonday = day.getNextWeekDay(1);
+const d = new Date();
 
+const nextMonday = day.getNextWeekDay(1);
 </script>
 <template>
   <div
@@ -70,18 +54,18 @@ const nextMonday = day.getNextWeekDay(1);
                   font-weight="500"
                 >
                   <tspan x="8" y="15" text-anchor="middle">
-                    {{ day.getDate() }}
+                    {{ new Date().getDate() }}
                   </tspan>
                 </text>
               </g>
-            </svg>
+            </svg>  
           </div>
           <div>
             <p class="text-sm font-bold">Today</p>
           </div>
         </div>
         <div>
-          <p class="text-sm text-gray-400">{{ weekday[day.getDay()] }}</p>
+          <p class="text-sm text-gray-400">{{ new Date().getDay() }}</p>
         </div>
       </div>
     </div>
@@ -188,7 +172,7 @@ const nextMonday = day.getNextWeekDay(1);
           </div>
         </div>
         <div>
-          <p class="text-sm text-gray-400">{{ nextMonday }}</p>
+          <p class="text-sm text-gray-400">{{d.setDate(d.getDate() + ((7 - d.getDay()) % 7 + 1) % 7) }}</p>
         </div>
       </div>
     </div>
